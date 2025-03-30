@@ -1,6 +1,6 @@
 var container = document.getElementById('container_carrusel2');
 var slider = document.getElementById('slider2');
-var slides = document.getElementsByTagName('img').length; 
+var slides = slider.getElementsByTagName('img').length; 
 var buttons = document.getElementsByClassName('btn_carrusel');
 
 var currentPosition = 0;
@@ -8,7 +8,7 @@ var currentMargin = 0;
 var slidesPerPage = 0;
 var slidesCount = slides - slidesPerPage;
 var containerWidth = container.offsetWidth;
-var moveStep = 4;
+var moveStep = 1;
 
 window.addEventListener("resize", checkWidth);
 setParams(containerWidth);
@@ -41,8 +41,8 @@ function setParams(w) {
 }
 
 function sliderRight() {
-    if (currentPosition + moveStep <= slidesCount) {
-        currentPosition += moveStep;
+    if (currentPosition < slidesCount) {
+        currentPosition++;
     } else {
         currentPosition = slidesCount;
     }
@@ -53,8 +53,8 @@ function sliderRight() {
 }
 
 function sliderLeft() {
-    if (currentPosition - moveStep >= 0) {
-        currentPosition -= moveStep;
+    if (currentPosition > 0) {
+        currentPosition--;
     } else {
         currentPosition = 0;
     }
@@ -68,6 +68,7 @@ function updateButtons() {
     buttons[0].classList.toggle('inactive', currentPosition === 0);
     buttons[1].classList.toggle('inactive', currentPosition >= slidesCount);
 }
+
 var btn_carruselLeft = buttons[0];
 var btn_carruselRight = buttons[1];
 var alternateImages = {

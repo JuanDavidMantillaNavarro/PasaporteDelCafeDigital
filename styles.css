@@ -197,14 +197,21 @@ body{
     .boton3 a:hover {
         background: #503330; /* Cambia el fondo */
     }
-
+/*CARRUSEL*/
+    #txt_tituloc{
+        font-family: "Poppins", sans-serif;
+        margin-top:50px;
+        margin-left:100px;
+        font-size: 20px;
+    }
     #carrusel2 {
+        margin-top: -30px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 60vh;
+        color: #331E1C;
     }
-    
     #container_carrusel2 {
         width: 89vw;
         max-width: 2200px;
