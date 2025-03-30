@@ -8,36 +8,55 @@ body{
     color:#E6D5B8;
     }
     
+/* HEADER */
+
     header{
         display: flex ;
+        flex-wrap: nowrap;
+        width: 100%;
         min-height: 70px;
         background-color: #4B2E2B;
         justify-content: space-between ;
         align-items: center;
-        padding: 10px;
+        padding: 10px 20px;
     }
     .logo{
         display: flex;
         align-items: center;
+        min-width: 150px;
     }
-    .logo img{
-        height: 80px;
+    .logo img{      
+        height: clamp(50px, 8vw, 80px);;
         margin-right: 10px;
         margin-left: 20px;
     }
     
+    nav {
+        display: flex;
+        flex-grow: 1; 
+        justify-content: center;
+        gap: 118px;
+    }
+
     nav a{
         font-weight: 600;
         padding-right:10px ;
+        font-size: clamp(14px, 2vw, 22px);
         margin-right: 90px;
     }
     
     nav a:hover{
         color:#dbbd88 ;
     }
+
+    .usuario {
+        display: flex;
+        align-items: center;
+        min-width: 100px;
+    }
     
     .usuario i{
-        font-size: 30px;
+        font-size: clamp(20px, 2.5vw, 30px);
         display: flex;
         align-items: center;
         color: #E6D5B8;
@@ -54,7 +73,29 @@ body{
         box-sizing: border-box;
     }
     
-    
+
+    /* 🔹 Media Query para evitar desorden en móviles */
+    @media (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduce padding en pantallas pequeñas */
+    }
+
+    nav {
+        gap: 15px; /* Reduce el espacio entre elementos */
+    }
+
+    .logo img {
+        height: 50px; /* Reduce tamaño del logo */
+    }
+
+    .usuario i {
+        font-size: 24px; /* Reduce tamaño del ícono */
+    }
+    }
+
+/* CIERRA HEADER */
+
+/* PANTALLA PRINCIPAL */
     #contenidocarrusel{
         height: 400px;
         overflow: hidden;
@@ -190,13 +231,14 @@ body{
         background: #331E1C; /* Fondo semitransparente */
         padding: 20px;
         border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
+        max-width: 40%; /* Ancho del contenido */
         z-index: 10;
     }
     
     .boton3 a:hover {
         background: #503330; /* Cambia el fondo */
     }
+
 /*CARRUSEL*/
     #txt_tituloc{
         font-family: "Poppins", sans-serif;
@@ -529,3 +571,98 @@ text-decoration: underline;
 .mante_sesion a:hover{
     text-decoration: underline;
 }
+
+/* HTML DEL MAPA*/
+
+    #map {
+        width: 80%;
+        height: 773px;
+        border-radius: 10px;
+        margin: 20px auto;
+        position: relative;
+    }
+
+    /* Contenedor */
+    .icono-cafeteria {
+    position: absolute; 
+    }
+
+    .icono-cafeteria .marcador {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; 
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; /* div tambien circular */
+        overflow: hidden; 
+        transition: transform 0.3s ease-in-out; /*Animacion*/
+        z-index: 10; /* Posicion en Z */
+    }
+
+    /* Capa oscura encima de la imagen OVERLAY */
+    .icono-cafeteria .marcador .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65); /* 65% de opacidad */
+        border-radius: 50%;
+        z-index: 3; /* z=3 */
+    }
+
+    .icono-cafeteria .marcador img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;  /* Imagen circular */
+        object-fit: cover; /* Evita deformaciones? */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    }
+
+    .marcador img {
+        width: 50px;  
+        height: 50px; 
+        aspect-ratio: 1/1; /* Mantiene la imagen cuadrada */
+        border-radius: 50%; /* Hace que sea un circulo */
+        object-fit: cover; /* Ajusta la imagen para que no se deforme */
+       
+    }
+
+    /* Texto encima de la imagen */
+    .texto-cafeteria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado el texto */
+    color: white;
+    font-size: 6px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    z-index: 4; /* Z=4 encima de la capa oscura */
+    max-width: 80%;  /* Ajusta el texto al círculo */
+    word-wrap: break-word; /* Hace que el texto salte de línea */
+    white-space: normal; /* Evita que el texto se quede en una sola línea */
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    transition: font-size 0.3s ease-in-out; /* Efecto de agrandado del texto */
+    }
+
+    /* 🔹 Efecto al pasar el mouse (hover) */
+    .icono-cafeteria .marcador:hover {
+    transform: scale(1.3); /* Hace que el marcador crezca un 30% */
+    z-index: 10000; /* Circulo encima del resto? REVISAR */
+    }
+
+    .icono-cafeteria .marcador:hover img {
+    transform: scale(1.1); /* se agranda la imagen */
+    }
+
+    .icono-cafeteria .marcador:hover .texto-cafeteria {
+    font-size: 10.3px; /* Aumenta el tamaño del texto para que sea más visible */
+    max-width: 90%; /* que el texto siga dentro del circulo */
+    }
+
