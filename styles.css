@@ -197,3 +197,82 @@ body{
     .boton3 a:hover {
         background: #503330; /* Cambia el fondo */
     }
+
+    /*Carrusel*/
+
+    #carrusel2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+    }
+    
+    #container_carrusel2 {
+        width: 89vw;
+        max-width: 2200px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #slider_container2 {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #slider2 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: max-content;
+        gap:20px;
+    
+    }
+    
+    #slider2 img {
+        width: 100%; 
+        max-width: 400px; 
+        height: auto; 
+        object-fit: cover; 
+        border-radius: 20px;
+    }
+    
+    /* Botones de navegación */
+    .btn_carrusel {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .btn_carrusel:first-of-type {
+        left: 10px;
+    }
+    .btn_carrusel:last-of-type {
+        right: 10px;
+    }
+    @media only screen and (min-width: 1100px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(2.5% - 20px);
+        }
+    }
+    @media only screen and (max-width: 1100px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(3.3333333% - 20px);
+        }
+    }
+    @media only screen and (max-width: 900px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(5% - 20px);
+        }
+    }
+    @media only screen and (max-width: 550px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(10% - 20px);
+        }
+    }
+    
