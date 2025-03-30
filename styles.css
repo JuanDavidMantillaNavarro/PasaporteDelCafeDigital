@@ -382,7 +382,7 @@ body{
     font-size: 18px;
 }
 
-
+/*Login*/
 .Cont_login {
     display: flex;
     justify-content: center;
@@ -462,4 +462,70 @@ body{
 }
 .link_registro p a:hover {
 text-decoration: underline;
+}
+
+
+/*Registro*/
+.Cont_registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: url('img_beneficios/fondologin.png');
+    font-family: "Poppins", sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+.registro {
+    width: 600px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #4B2E2B;
+    border-radius: 10px;
+    padding: 80px 60px;
+}
+.registro h1 {
+    font-size:36px;
+    text-align: center;
+}
+.registro .caja_registro {
+    width: 100%;
+    height: 30px;
+    background:#ffffff ;
+    margin:30px 0px;
+}
+
+.caja_registro input {
+    width: 100%;
+    height: 100%;
+    background:transparent ;
+    border: 2px solid #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    color:#000;
+    padding: 20px 45px 20px 20px;
+}
+
+.registro .btn_registro{
+    width: 100%;
+    height: 60px;
+    background: #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    border:none;
+    cursor:pointer;
+    font-size: 16px;
+    color:#ffffff;
+    font-weight: 600;
+}
+.mante_sesion label input {
+    accent-color: #4B2E2B;
+    margin: 10px;
+}
+.mante_sesion a{
+    color:#4B2E2B;
+}
+.mante_sesion a:hover{
+    text-decoration: underline;
 }
