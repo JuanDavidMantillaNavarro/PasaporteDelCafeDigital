@@ -198,8 +198,6 @@ body{
         background: #503330; /* Cambia el fondo */
     }
 
-    /*Carrusel*/
-
     #carrusel2 {
         display: flex;
         justify-content: center;
@@ -275,4 +273,3 @@ body{
             width: calc(10% - 20px);
         }
     }
-    
