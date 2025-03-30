@@ -280,3 +280,104 @@ body{
             width: calc(10% - 20px);
         }
     }
+
+/*Beneficios*/
+.Titulos {
+    color:#331E1C;
+    font-family:Cambria ;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+}
+#img_beneficios1 {
+    width: 1920px; 
+    height: 350px; 
+    overflow: hidden; 
+    display:flex;
+    align-items: center;
+}
+#cont1_b {
+    width: 1920px;
+    height: auto;
+    background-color:#4B2E2B ;
+    color:#FFFFFF ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#cont2_b {
+    display: flex;
+    align-items: center;
+    width: 90vw; 
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px; 
+    padding: 40px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+#text_b2 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    gap: 30px;
+}
+.txt_info{
+    width: 700px;
+    height: auto;
+    line-height: 1.5;
+}
+
+#img_b2 {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.caja_beneficios {
+    background-color: #4B2E2B;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-weight: 300;
+    align-self: flex-start; 
+}
+#cont3_b{
+    display: flex;
+    align-items: center;
+    width: 90vw; 
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px; 
+    padding: 40px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+#aviso_b {
+    background-color: #D9D9D9;
+    color:#4B2E2B;
+    padding: 30px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+.text_b3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+
+}
+.txt_info2 {
+    font-size: 18px;
+}
