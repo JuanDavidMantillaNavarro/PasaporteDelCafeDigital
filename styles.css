@@ -1,243 +1,275 @@
-body{
-    font-family:sans-serif ;
+body {
+    font-family: sans-serif;
     margin: 0;
-    }
-    
-    a{
-    text-decoration: none ;
-    color:#E6D5B8;
-    }
-    
+}
+
+a {
+    text-decoration: none;
+    color: #E6D5B8;
+}
+
 /* HEADER */
 
-    header{
-        display: flex ;
-        flex-wrap: nowrap;
-        width: 100%;
-        min-height: 70px;
-        background-color: #4B2E2B;
-        justify-content: space-between ;
-        align-items: center;
-        padding: 10px 20px;
-    }
-    .logo{
-        display: flex;
-        align-items: center;
-        min-width: 150px;
-    }
-    .logo img{      
-        height: clamp(50px, 8vw, 80px);;
-        margin-right: 10px;
-        margin-left: 20px;
-    }
-    
-    nav {
-        display: flex;
-        flex-grow: 1; 
-        justify-content: center;
-        gap: 118px;
-    }
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 70px;
+    background-color: #4B2E2B;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 
-    nav a{
-        font-weight: 600;
-        padding-right:10px ;
-        font-size: clamp(14px, 2vw, 22px);
-        margin-right: 90px;
-    }
-    
-    nav a:hover{
-        color:#dbbd88 ;
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
 
-    .usuario {
-        display: flex;
-        align-items: center;
-        min-width: 100px;
-    }
-    
-    .usuario i{
-        font-size: clamp(20px, 2.5vw, 30px);
-        display: flex;
-        align-items: center;
-        color: #E6D5B8;
-        margin-right: 30px;
-    }
-    
-    .usuario i:hover{
-        color:#dbbd88 ;
-    }
-    
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
+.logo img {
+    height: clamp(50px, 8vw, 80px);
+    ;
+    margin-right: 10px;
+    margin-left: 20px;
+}
 
-    /* 🔹 Media Query para evitar desorden en móviles */
-    @media (max-width: 768px) {
-    header {
-        padding: 10px; /* Reduce padding en pantallas pequeñas */
-    }
+.menu.is_active {
+    display: block;
+}
 
-    nav {
-        gap: 15px; /* Reduce el espacio entre elementos */
-    }
 
-    .logo img {
-        height: 50px; /* Reduce tamaño del logo */
-    }
+#hamburguesa {
+    display: none;
+    color: #E6D5B8;
+}
 
-    .usuario i {
-        font-size: 24px; /* Reduce tamaño del ícono */
-    }
-    }
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 118px;
+}
+
+nav ul {
+    display: inline-flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 3rem;
+    text-align: center;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: clamp(14px, 2vw, 22px);
+}
+
+nav a:hover {
+    color: #dbbd88;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+}
+
+.usuario i {
+    font-size: clamp(20px, 2.5vw, 30px);
+    display: flex;
+    align-items: center;
+    color: #E6D5B8;
+    margin-right: 30px;
+}
+
+.usuario i:hover {
+    color: #dbbd88;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 /* CIERRA HEADER */
 
 /* PANTALLA PRINCIPAL */
-    #contenidocarrusel{
-        height: 400px;
-        overflow: hidden;
-        
-    }
-    
-    
-    .itemcarrusel{
-        border: 1px solid black;
-        height: 100%;
-        position:relative ;
-    }
-    
-    
-    .tarjetacarrusel{
-        
-        height: 100%;
-    }
-    
-    .flechascarrusel{
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    
-    
-    i{
-        color: black;
-        font-size: 40px;
-    }
-    
-    i:hover{
-        color:#998e7b ;
-    }
-    
-    #tarjetacarrusel-1 img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    #tarjetacarrusel-2 img{
-        width: 100%;
-        height: 108%;
-    }
-    
-    
-    #tarjetacarrusel-3 img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .contenido-superpuesto {
-        position: absolute;
-        top: 40%; 
-        right: 9%; /* Alinea el contenido hacia la derecha */
-        text-align: center; /* Alinea el texto a la derecha */
-        color: #4B2E2B; 
-        background: rgba(230, 213, 184, 0.5); /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
-    }
-    
-    
-    .boton1 a{
-        position: absolute;
-        top: 67%; 
-        right: 23%; /* Alinea el contenido hacia la derecha */
-        text-align: center; /* Alinea el texto a la derecha */
-        color: #F5F5F5; 
-        background: #331E1C; /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
-        z-index: 10;
-    
-    }
-    .boton1 a:hover {
-        background: #503330; /* Cambia el fondo */
-    }
-    .contenido-superpuesto-2{
-        position: absolute;
-        top: 40%; 
-        right: 50%; /* Alinea el contenido hacia la derecha */
-        text-align: center; /* Alinea el texto a la derecha */
-        color: #D9C4A0; 
-        background: rgb(76, 136, 186,0.5); /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
-    }
-    
-    .boton2 a{
-        position: absolute;
-        top: 65%; 
-        left: 25%; /* Alinea el contenido hacia la derecha */
-        text-align: center; /* Alinea el texto a la derecha */
-        color: #331E1C; 
-        background: #C0B093; /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
-        z-index: 10;
-    }
-    
-    .boton2 a:hover {
-        background: #A09078; /* Cambia el fondo */
-    }
-    
-    .contenido-superpuesto-3{
-        position: absolute;
-        top: 40%; 
-        left: 33%;  /* Centra horizontalmente */
-        text-align: center;
-        color: #331E1C; 
-        background: rgb(217, 196, 160,0.5); /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Controla el ancho del contenido */
-    }
-    
-    .boton3 a{
-        position: absolute;
-        top: 60%; 
-        left: 45%; /* Alinea el contenido hacia la derecha */
-        text-align: center; /* Alinea el texto a la derecha */
-        color: #FFFFFF; 
-        background: #331E1C; /* Fondo semitransparente */
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 40%; /* Ancho del contenido */
-        z-index: 10;
-    }
-    
-    .boton3 a:hover {
-        background: #503330; /* Cambia el fondo */
-    }
+#contenidocarrusel {
+    height: 400px;
+    overflow: hidden;
+
+}
+
+
+.itemcarrusel {
+    border: 1px solid black;
+    height: 100%;
+    position: relative;
+}
+
+
+.tarjetacarrusel {
+
+    height: 100%;
+}
+
+.flechascarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+i {
+    color: black;
+    font-size: 40px;
+}
+
+i:hover {
+    color: #998e7b;
+}
+
+#tarjetacarrusel-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+#tarjetacarrusel-2 img {
+    width: 100%;
+    height: 108%;
+}
+
+
+#tarjetacarrusel-3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-superpuesto {
+    position: absolute;
+    top: 40%;
+    right: 9%;
+    /* Alinea el contenido hacia la derecha */
+    text-align: center;
+    /* Alinea el texto a la derecha */
+    color: #4B2E2B;
+    background: rgba(230, 213, 184, 0.5);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Controla el ancho del contenido */
+}
+
+
+.boton1 a {
+    position: absolute;
+    top: 67%;
+    right: 23%;
+    /* Alinea el contenido hacia la derecha */
+    text-align: center;
+    /* Alinea el texto a la derecha */
+    color: #F5F5F5;
+    background: #331E1C;
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Controla el ancho del contenido */
+    z-index: 10;
+
+}
+
+.boton1 a:hover {
+    background: #503330;
+    /* Cambia el fondo */
+}
+
+.contenido-superpuesto-2 {
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    /* Alinea el contenido hacia la derecha */
+    text-align: center;
+    /* Alinea el texto a la derecha */
+    color: #D9C4A0;
+    background: rgb(76, 136, 186, 0.5);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Controla el ancho del contenido */
+}
+
+.boton2 a {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    /* Alinea el contenido hacia la derecha */
+    text-align: center;
+    /* Alinea el texto a la derecha */
+    color: #331E1C;
+    background: #C0B093;
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Controla el ancho del contenido */
+    z-index: 10;
+}
+
+.boton2 a:hover {
+    background: #A09078;
+    /* Cambia el fondo */
+}
+
+.contenido-superpuesto-3 {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    /* Centra horizontalmente */
+    text-align: center;
+    color: #331E1C;
+    background: rgb(217, 196, 160, 0.5);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Controla el ancho del contenido */
+}
+
+.boton3 a {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    /* Alinea el contenido hacia la derecha */
+    text-align: center;
+    /* Alinea el texto a la derecha */
+    color: #FFFFFF;
+    background: #331E1C;
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    /* Ancho del contenido */
+    z-index: 10;
+}
+
+.boton3 a:hover {
+    background: #503330;
+    /* Cambia el fondo */
+}
 
 /*CARRUSEL*/
     #txt_tituloc{
@@ -574,80 +606,97 @@ text-decoration: underline;
 
 /* HTML DEL MAPA*/
 
-    #map {
-        width: 80%;
-        height: 773px;
-        border-radius: 10px;
-        margin: 20px auto;
-        position: relative;
-    }
+#map {
+    width: 80%;
+    height: 773px;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+}
 
-    /* Contenedor */
-    .icono-cafeteria {
-    position: absolute; 
-    }
+/* Contenedor */
+.icono-cafeteria {
+    position: absolute;
+}
 
-    .icono-cafeteria .marcador {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative; 
-        width: 50px;
-        height: 50px;
-        border-radius: 50%; /* div tambien circular */
-        overflow: hidden; 
-        transition: transform 0.3s ease-in-out; /*Animacion*/
-        z-index: 10; /* Posicion en Z */
-    }
+.icono-cafeteria .marcador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* div tambien circular */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    /*Animacion*/
+    z-index: 10;
+    /* Posicion en Z */
+}
 
-    /* Capa oscura encima de la imagen OVERLAY */
-    .icono-cafeteria .marcador .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.65); /* 65% de opacidad */
-        border-radius: 50%;
-        z-index: 3; /* z=3 */
-    }
+/* Capa oscura encima de la imagen OVERLAY */
+.icono-cafeteria .marcador .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    /* 65% de opacidad */
+    border-radius: 50%;
+    z-index: 3;
+    /* z=3 */
+}
 
-    .icono-cafeteria .marcador img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;  /* Imagen circular */
-        object-fit: cover; /* Evita deformaciones? */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
-    }
+.icono-cafeteria .marcador img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Imagen circular */
+    object-fit: cover;
+    /* Evita deformaciones? */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Efecto de sombra */
+}
 
-    .marcador img {
-        width: 50px;  
-        height: 50px; 
-        aspect-ratio: 1/1; /* Mantiene la imagen cuadrada */
-        border-radius: 50%; /* Hace que sea un circulo */
-        object-fit: cover; /* Ajusta la imagen para que no se deforme */
-       
-    }
+.marcador img {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    /* Mantiene la imagen cuadrada */
+    border-radius: 50%;
+    /* Hace que sea un circulo */
+    object-fit: cover;
+    /* Ajusta la imagen para que no se deforme */
 
-    /* Texto encima de la imagen */
-    .texto-cafeteria {
+}
+
+/* Texto encima de la imagen */
+.texto-cafeteria {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrado el texto */
+    transform: translate(-50%, -50%);
+    /* Centrado el texto */
     color: white;
     font-size: 6px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-weight: bold;
-    z-index: 4; /* Z=4 encima de la capa oscura */
-    max-width: 80%;  /* Ajusta el texto al círculo */
-    word-wrap: break-word; /* Hace que el texto salte de línea */
-    white-space: normal; /* Evita que el texto se quede en una sola línea */
+    z-index: 4;
+    /* Z=4 encima de la capa oscura */
+    max-width: 80%;
+    /* Ajusta el texto al círculo */
+    word-wrap: break-word;
+    /* Hace que el texto salte de línea */
+    white-space: normal;
+    /* Evita que el texto se quede en una sola línea */
     display: flex;
-    
+
     justify-content: center;
     flex-direction: column;
+
     transition: font-size 0.3s ease-in-out; /* Efecto de agrandado del texto */
     }
 
@@ -665,4 +714,30 @@ text-decoration: underline;
     font-size: 10.3px; /* Aumenta el tamaño del texto para que sea más visible */
     max-width: 90%; /* que el texto siga dentro del circulo */
     }
+=======
+    transition: font-size 0.3s ease-in-out;
+    /* Efecto de agrandado del texto */
+}
+
+/* 🔹 Efecto al pasar el mouse (hover) */
+.icono-cafeteria .marcador:hover {
+    transform: scale(1.3);
+    /* Hace que el marcador crezca un 30% */
+    z-index: 10000;
+    /* Circulo encima del resto? REVISAR */
+}
+
+.icono-cafeteria .marcador:hover img {
+    transform: scale(1.1);
+    /* se agranda la imagen */
+}
+
+.icono-cafeteria .marcador:hover .texto-cafeteria {
+    font-size: 10.3px;
+    /* Aumenta el tamaño del texto para que sea más visible */
+    max-width: 90%;
+    /* que el texto siga dentro del circulo */
+}
+
+
 
