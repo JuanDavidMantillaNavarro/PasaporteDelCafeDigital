@@ -1030,6 +1030,15 @@ i:hover {
 
 
 /* PAGINA CÓMO FUNCIONA*/
+
+.contenedor-como-funciona {
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 40px;
+  }
+
 .titulocomofunciona {
     color: #4B2E2B;
     font-family: 'Bebas Neue', sans-serif;
@@ -1158,5 +1167,29 @@ i:hover {
         font-size: 1.5rem;
     }
 
+    .contenedor-como-funciona {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .imagencomofunciona {
+        width: 90vw;
+        max-width: 100%;
+      }
+      .titulocomofunciona{
+        font-size: 28px;
+        margin: 0 auto;
+        
+      }
+      .titulospequeños {
+        font-size: 20px;
+        margin: 0 auto;
+      }
+      .parrafoscomofunciona {
+        font-size: 16px;
+        text-align: justify;
+        margin: 0 auto;
+      }
 
 }
