@@ -272,109 +272,119 @@ i:hover {
 }
 
 /*CARRUSEL*/
-    #txt_tituloc{
-        font-family: "Poppins", sans-serif;
-        margin-top:50px;
-        margin-left:100px;
-        font-size: 20px;
+#txt_tituloc {
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+#carrusel2 {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #331E1C;
+}
+
+#container_carrusel2 {
+    width: 89vw;
+    max-width: 2200px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider_container2 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#slider2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    gap: 20px;
+
+}
+
+#slider2 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Botones de navegación */
+.btn_carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn_carrusel:first-of-type {
+    left: 10px;
+}
+
+.btn_carrusel:last-of-type {
+    right: 10px;
+}
+
+@media only screen and (min-width: 1100px) {
+    #slider_container2 #slider2 .slider2 {
+        width: calc(2.5% - 20px);
     }
-    #carrusel2 {
-        margin-top: -30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60vh;
-        color: #331E1C;
+}
+
+@media only screen and (max-width: 1100px) {
+    #slider_container2 #slider2 .slider2 {
+        width: calc(3.3333333% - 20px);
     }
-    #container_carrusel2 {
-        width: 89vw;
-        max-width: 2200px;
-        overflow: hidden;
-        position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+    #slider_container2 #slider2 .slider2 {
+        width: calc(5% - 20px);
     }
-    
-    #slider_container2 {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
+}
+
+@media only screen and (max-width: 550px) {
+    #slider_container2 #slider2 .slider2 {
+        width: calc(10% - 20px);
     }
-    
-    #slider2 {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: max-content;
-        gap:20px;
-    
-    }
-    
-    #slider2 img {
-        width: 100%; 
-        max-width: 400px; 
-        height: auto; 
-        object-fit: cover; 
-        border-radius: 20px;
-    }
-    
-    /* Botones de navegación */
-    .btn_carrusel {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        font-size: 20px;
-        cursor: pointer;
-        z-index: 10;
-    }
-    .btn_carrusel:first-of-type {
-        left: 10px;
-    }
-    .btn_carrusel:last-of-type {
-        right: 10px;
-    }
-    @media only screen and (min-width: 1100px){
-        #slider_container2 #slider2 .slider2{
-            width: calc(2.5% - 20px);
-        }
-    }
-    @media only screen and (max-width: 1100px){
-        #slider_container2 #slider2 .slider2{
-            width: calc(3.3333333% - 20px);
-        }
-    }
-    @media only screen and (max-width: 900px){
-        #slider_container2 #slider2 .slider2{
-            width: calc(5% - 20px);
-        }
-    }
-    @media only screen and (max-width: 550px){
-        #slider_container2 #slider2 .slider2{
-            width: calc(10% - 20px);
-        }
-    }
+}
 
 /*Beneficios*/
 .Titulos {
-    color:#331E1C;
-    font-family:Cambria ;
+    color: #331E1C;
+    font-family: Cambria;
     text-align: center;
     font-size: 45px;
     margin-top: 10px;
 }
+
 #img_beneficios1 {
-    width: 1920px; 
-    height: 350px; 
-    overflow: hidden; 
-    display:flex;
+    width: 1920px;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
     align-items: center;
 }
+
 #cont1_b {
     width: 1920px;
     height: auto;
-    background-color:#4B2E2B ;
-    color:#FFFFFF ;
+    background-color: #4B2E2B;
+    color: #FFFFFF;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -389,14 +399,15 @@ i:hover {
 #cont2_b {
     display: flex;
     align-items: center;
-    width: 90vw; 
+    width: 90vw;
     max-width: 1400px;
     margin: auto;
-    gap: 20px; 
+    gap: 20px;
     padding: 40px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
 }
+
 #text_b2 {
     font-size: 20px;
     display: flex;
@@ -404,15 +415,16 @@ i:hover {
     font-family: "Poppins", sans-serif;
     gap: 30px;
 }
-.txt_info{
+
+.txt_info {
     width: 700px;
     height: auto;
     line-height: 1.5;
 }
 
 #img_b2 {
-    width: 250px; 
-    height: 250px; 
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -422,22 +434,24 @@ i:hover {
     color: #ffffff;
     padding: 8px 15px;
     font-weight: 300;
-    align-self: flex-start; 
+    align-self: flex-start;
 }
-#cont3_b{
+
+#cont3_b {
     display: flex;
     align-items: center;
-    width: 90vw; 
+    width: 90vw;
     max-width: 1400px;
     margin: auto;
-    gap: 20px; 
+    gap: 20px;
     padding: 40px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
 }
+
 #aviso_b {
     background-color: #D9D9D9;
-    color:#4B2E2B;
+    color: #4B2E2B;
     padding: 30px 30px;
     border-radius: 10px;
     text-align: center;
@@ -445,6 +459,7 @@ i:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
 }
+
 .text_b3 {
     font-size: 22px;
     font-weight: bold;
@@ -452,6 +467,7 @@ i:hover {
     font-family: "Poppins", sans-serif;
 
 }
+
 .txt_info2 {
     font-size: 18px;
 }
@@ -467,6 +483,7 @@ i:hover {
     background-size: cover;
     background-position: center;
 }
+
 .login {
     width: 600px;
     background: #FFFFFF;
@@ -475,67 +492,78 @@ i:hover {
     border-radius: 10px;
     padding: 100px 60px;
 }
+
 .login h1 {
-    font-size:36px;
+    font-size: 36px;
     text-align: center;
 }
+
 .login .caja_login {
     width: 100%;
     height: 50px;
-    background:#ffffff ;
-    margin:30px 0px;
+    background: #ffffff;
+    margin: 30px 0px;
 }
+
 .caja_login input {
     width: 100%;
     height: 100%;
-    background:transparent ;
+    background: transparent;
     border: 2px solid #4B2E2B;
     border-radius: 40px;
     font-size: 16px;
-    color:#000;
+    color: #000;
     padding: 20px 45px 20px 20px;
 }
+
 .login .recordar_usario {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin:-15px 0 15px;
+    margin: -15px 0 15px;
 }
+
 .recordar_usario label input {
     accent-color: #4B2E2B;
     margin-right: 3px;
 }
-.recordar_usario a{
-    color:#4B2E2B;
+
+.recordar_usario a {
+    color: #4B2E2B;
 }
-.recordar_usario a:hover{
+
+.recordar_usario a:hover {
     text-decoration: underline;
 }
-.login .btn_login{
+
+.login .btn_login {
     width: 100%;
     height: 60px;
     background: #4B2E2B;
     border-radius: 40px;
     font-size: 16px;
     padding: 20px 45px 20px 20px;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
     font-size: 16px;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: 600;
 }
+
 .login .link_registro {
     font-size: 14.5px;
     text-align: center;
-    margin-top: 25px ;
+    margin-top: 25px;
 }
+
 .link_registro p a {
-    color:#4B2E2B;
+    color: #4B2E2B;
     text-decoration: none;
     font-weight: 600;
 }
+
 .link_registro p a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 
@@ -550,6 +578,7 @@ text-decoration: underline;
     background-size: cover;
     background-position: center;
 }
+
 .registro {
     width: 600px;
     background: #FFFFFF;
@@ -558,49 +587,54 @@ text-decoration: underline;
     border-radius: 10px;
     padding: 80px 60px;
 }
+
 .registro h1 {
-    font-size:36px;
+    font-size: 36px;
     text-align: center;
 }
+
 .registro .caja_registro {
     width: 100%;
     height: 30px;
-    background:#ffffff ;
-    margin:30px 0px;
+    background: #ffffff;
+    margin: 30px 0px;
 }
 
 .caja_registro input {
     width: 100%;
     height: 100%;
-    background:transparent ;
+    background: transparent;
     border: 2px solid #4B2E2B;
     border-radius: 40px;
     font-size: 16px;
-    color:#000;
+    color: #000;
     padding: 20px 45px 20px 20px;
 }
 
-.registro .btn_registro{
+.registro .btn_registro {
     width: 100%;
     height: 60px;
     background: #4B2E2B;
     border-radius: 40px;
     font-size: 16px;
     padding: 20px 45px 20px 20px;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
     font-size: 16px;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: 600;
 }
+
 .mante_sesion label input {
     accent-color: #4B2E2B;
     margin: 10px;
 }
-.mante_sesion a{
-    color:#4B2E2B;
+
+.mante_sesion a {
+    color: #4B2E2B;
 }
-.mante_sesion a:hover{
+
+.mante_sesion a:hover {
     text-decoration: underline;
 }
 
@@ -697,27 +731,32 @@ text-decoration: underline;
     justify-content: center;
     flex-direction: column;
 
-    transition: font-size 0.3s ease-in-out; /* Efecto de agrandado del texto */
-    }
-
-    /* 🔹 Efecto al pasar el mouse (hover) */
-    .icono-cafeteria .marcador:hover {
-    transform: scale(1.3); /* Hace que el marcador crezca un 30% */
-    z-index: 10000; /* Circulo encima del resto? REVISAR */
-    }
-
-    .icono-cafeteria .marcador:hover img {
-    transform: scale(1.1); /* se agranda la imagen */
-    }
-
-    .icono-cafeteria .marcador:hover .texto-cafeteria {
-    font-size: 10.3px; /* Aumenta el tamaño del texto para que sea más visible */
-    max-width: 90%; /* que el texto siga dentro del circulo */
-    }
-=======
     transition: font-size 0.3s ease-in-out;
     /* Efecto de agrandado del texto */
 }
+
+/* 🔹 Efecto al pasar el mouse (hover) */
+.icono-cafeteria .marcador:hover {
+    transform: scale(1.3);
+    /* Hace que el marcador crezca un 30% */
+    z-index: 10000;
+    /* Circulo encima del resto? REVISAR */
+}
+
+.icono-cafeteria .marcador:hover img {
+    transform: scale(1.1);
+    /* se agranda la imagen */
+}
+
+.icono-cafeteria .marcador:hover .texto-cafeteria {
+    font-size: 10.3px;
+    /* Aumenta el tamaño del texto para que sea más visible */
+    max-width: 90%;
+    /* que el texto siga dentro del circulo */
+    transition: font-size 0.3s ease-in-out;
+}
+
+
 
 /* 🔹 Efecto al pasar el mouse (hover) */
 .icono-cafeteria .marcador:hover {
@@ -741,3 +780,416 @@ text-decoration: underline;
 
 
 
+/* PAGINA PASAPORTE*/
+.flechaspasaporte {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Coloca las flechas a los lados */
+    z-index: 10;
+    pointer-events: none;
+    /* Evita que interfieran con otros elementos */
+}
+
+.flechaspasaporte i {
+    text-decoration: none;
+    font-size: 2.5rem;
+    /* Tamaño de las flechas */
+    color: #4B2E2B;
+    /* Ajusta el color */
+    transition: color 0.3s;
+    pointer-events: auto;
+    /* Habilita la interacción con los enlaces */
+}
+
+.flechaspasaporte i:hover {
+    color: #b87333;
+    /* Cambia de color al pasar el mouse */
+}
+
+
+
+
+.fondosellos {
+    background-image: url('Imagenes/sellos.jpg');
+}
+
+
+.contenedor-scroll {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    /* Oculta los elementos que están fuera del contenedor */
+}
+
+#contenedorgeneral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Oculta los elementos que están fuera del contenedor */
+    min-width: 100%;
+    /* Evita que se salga */
+    width: max-content;
+    height: 700px;
+    margin-top: 100px;
+    border-radius: 40px;
+    padding: 20px;
+    gap: 20px;
+    /* Agrega espacio entre los elementos */
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.logocafe {
+    width: 130px;
+    /* Tamaño del logo */
+    text-align: center;
+    /* Centra el contenido */
+    margin-bottom: 20px;
+    /* Espacio entre el logo y el carrusel */
+}
+
+.logocafe img {
+    width: 100%;
+    height: auto;
+}
+
+.carrusel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centra los elementos internos */
+    flex-direction: column;
+    /* Asegura que los elementos estén en columna */
+    width: 400px;
+    height: 600px;
+    background-color: #4B2E2B;
+    border-radius: 40px;
+
+
+}
+
+.paginapasaporte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Ocupar todo el ancho del contenedor */
+}
+
+
+.paginascarrusel {
+    position: relative;
+    /* Para que los sellos se posicionen sobre la imagen */
+    width: 250px;
+    height: 390px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.paginascarrusel img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.textopasaporte {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(230, 213, 184, 0.8);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ajuste del contenedor para ingresar el codigo código */
+.contenedor-codigo {
+    display: flex;
+    /* Activa flexbox */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente */
+    margin-top: 6px;
+    gap: 10px;
+    /* Espaciado entre elementos */
+}
+
+.contenedor-codigo input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f5e1c8;
+    /* Color beige */
+    border: 2px solid #d2a679;
+    /* Opcional: borde para mejor visibilidad */
+    color: #4B2E2B;
+    /* Color del texto */
+}
+
+.contenedor-codigo button {
+    background: none;
+    /* Elimina el fondo */
+    border: none;
+    /* Elimina el borde */
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0;
+    /* Elimina el relleno extra */
+}
+
+.contenedor-codigo button i {
+    color: #E6D5B8;
+    /* Cambia el color del icono */
+    font-size: 30px;
+    /* Ajusta el tamaño */
+}
+
+.contenedor-codigo button:hover i {
+    color: #705e43;
+    /* Cambia el color del icono al pasar el cursor */
+}
+
+.fondo-compass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 190px !important;
+    /* Fuerza el tamaño */
+    height: auto !important;
+    /* Mantiene la proporción */
+    opacity: 0.5;
+    /* Ajusta la transparencia (0 = invisible, 1 = opaco) */
+    z-index: 9;
+}
+
+.sello {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 190px !important;
+    /* Fuerza el tamaño */
+    height: auto !important;
+    /* Mantiene la proporción */
+    z-index: 10;
+}
+
+
+/* Mantiene la proporción */
+.logoscafes {
+    width: 90px !important;
+    height: auto !important;
+}
+
+
+
+.estrellas-container,
+.contenedor-estrellas {
+    display: none;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.estrella {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrella.seleccionada {
+    color: gold;
+}
+
+
+
+/* PAGINA CÓMO FUNCIONA*/
+
+.contenedor-como-funciona {
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 40px;
+  }
+
+.titulocomofunciona {
+    color: #4B2E2B;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    text-align: right;
+    margin-right: 5vw;
+
+}
+
+
+.titulospequeños {
+
+    color: #4B2E2B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    margin-left: 45vw;
+}
+
+
+.parrafoscomofunciona {
+
+    font-family: 'Poppins', sans-serif;
+    color: #4B2E2B;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 45vw;
+}
+
+.parrafoscomofunciona::before {
+    content: "• ";
+    /* Este es el punto (puede ser también "●", "-", etc.) */
+    font-size: 30px;
+    color: #4B2E2B;
+    /* Color del punto */
+    font-weight: bold;
+    /* Si querés que se vea más fuerte */
+}
+
+
+
+.imagencomofunciona {
+    float: left;
+    margin-left: 4.2vw;
+    width: 31.25vw;
+    height: 74vh;
+    margin-top: 0.1vh;
+}
+
+/* 🔹 Media Query para evitar desorden en móviles */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 10px;
+        /* Reduce padding en pantallas pequeñas */
+    }
+
+    nav {
+        gap: 15px;
+        /* Reduce el espacio entre elementos */
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    #hamburguesa {
+        display: block;
+    }
+
+    .menu.is_active {
+        display: flex;
+    }
+
+    .menu {
+        background-color: #331E1C;
+        bottom: 0;
+        height: 20vh;
+        right: 0;
+        overflow-y: scroll;
+        position: fixed;
+        top: 12.5vh;
+        display: none;
+        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+        width: 50%;
+        z-index: 1001;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .logo img {
+        height: 50px;
+        /* Reduce tamaño del logo */
+    }
+
+    .usuario i {
+        font-size: 24px;
+        /* Reduce tamaño del ícono */
+    }
+
+
+
+    .carrusel-item {
+        width: 80vw;
+        /* View width */
+        margin: 15px;
+    }
+
+    .textopasaporte {
+        font-size: 20px;
+        width: 80%;
+        padding: 10px;
+    }
+
+    .contenido-superpuesto h2,
+    .contenido-superpuesto-2 h2,
+    .contenido-superpuesto-3 h2 {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .flechascarrusel i {
+        font-size: 1.5rem;
+    }
+
+    .contenedor-como-funciona {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .imagencomofunciona {
+        width: 90vw;
+        max-width: 100%;
+      }
+      .titulocomofunciona{
+        font-size: 28px;
+        margin: 0 auto;
+        
+      }
+      .titulospequeños {
+        font-size: 20px;
+        margin: 0 auto;
+      }
+      .parrafoscomofunciona {
+        font-size: 16px;
+        text-align: justify;
+        margin: 0 auto;
+      }
+
+}
