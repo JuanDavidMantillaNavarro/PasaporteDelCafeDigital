@@ -271,6 +271,339 @@ i:hover {
     /* Cambia el fondo */
 }
 
+/*CARRUSEL*/
+    #txt_tituloc{
+        font-family: "Poppins", sans-serif;
+        margin-top:50px;
+        margin-left:100px;
+        font-size: 20px;
+    }
+    #carrusel2 {
+        margin-top: -30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        color: #331E1C;
+    }
+    #container_carrusel2 {
+        width: 89vw;
+        max-width: 2200px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #slider_container2 {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #slider2 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: max-content;
+        gap:20px;
+    
+    }
+    
+    #slider2 img {
+        width: 100%; 
+        max-width: 400px; 
+        height: auto; 
+        object-fit: cover; 
+        border-radius: 20px;
+    }
+    
+    /* Botones de navegación */
+    .btn_carrusel {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .btn_carrusel:first-of-type {
+        left: 10px;
+    }
+    .btn_carrusel:last-of-type {
+        right: 10px;
+    }
+    @media only screen and (min-width: 1100px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(2.5% - 20px);
+        }
+    }
+    @media only screen and (max-width: 1100px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(3.3333333% - 20px);
+        }
+    }
+    @media only screen and (max-width: 900px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(5% - 20px);
+        }
+    }
+    @media only screen and (max-width: 550px){
+        #slider_container2 #slider2 .slider2{
+            width: calc(10% - 20px);
+        }
+    }
+
+/*Beneficios*/
+.Titulos {
+    color:#331E1C;
+    font-family:Cambria ;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+}
+#img_beneficios1 {
+    width: 1920px; 
+    height: 350px; 
+    overflow: hidden; 
+    display:flex;
+    align-items: center;
+}
+#cont1_b {
+    width: 1920px;
+    height: auto;
+    background-color:#4B2E2B ;
+    color:#FFFFFF ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#cont2_b {
+    display: flex;
+    align-items: center;
+    width: 90vw; 
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px; 
+    padding: 40px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+#text_b2 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    gap: 30px;
+}
+.txt_info{
+    width: 700px;
+    height: auto;
+    line-height: 1.5;
+}
+
+#img_b2 {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.caja_beneficios {
+    background-color: #4B2E2B;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-weight: 300;
+    align-self: flex-start; 
+}
+#cont3_b{
+    display: flex;
+    align-items: center;
+    width: 90vw; 
+    max-width: 1400px;
+    margin: auto;
+    gap: 20px; 
+    padding: 40px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+#aviso_b {
+    background-color: #D9D9D9;
+    color:#4B2E2B;
+    padding: 30px 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+.text_b3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+
+}
+.txt_info2 {
+    font-size: 18px;
+}
+
+/*Login*/
+.Cont_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: url('img_beneficios/fondologin.png');
+    font-family: "Poppins", sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+.login {
+    width: 600px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #4B2E2B;
+    border-radius: 10px;
+    padding: 100px 60px;
+}
+.login h1 {
+    font-size:36px;
+    text-align: center;
+}
+.login .caja_login {
+    width: 100%;
+    height: 50px;
+    background:#ffffff ;
+    margin:30px 0px;
+}
+.caja_login input {
+    width: 100%;
+    height: 100%;
+    background:transparent ;
+    border: 2px solid #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    color:#000;
+    padding: 20px 45px 20px 20px;
+}
+.login .recordar_usario {
+    display:flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin:-15px 0 15px;
+}
+.recordar_usario label input {
+    accent-color: #4B2E2B;
+    margin-right: 3px;
+}
+.recordar_usario a{
+    color:#4B2E2B;
+}
+.recordar_usario a:hover{
+    text-decoration: underline;
+}
+.login .btn_login{
+    width: 100%;
+    height: 60px;
+    background: #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    border:none;
+    cursor:pointer;
+    font-size: 16px;
+    color:#ffffff;
+    font-weight: 600;
+}
+.login .link_registro {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 25px ;
+}
+.link_registro p a {
+    color:#4B2E2B;
+    text-decoration: none;
+    font-weight: 600;
+}
+.link_registro p a:hover {
+text-decoration: underline;
+}
+
+
+/*Registro*/
+.Cont_registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: url('img_beneficios/fondologin.png');
+    font-family: "Poppins", sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+.registro {
+    width: 600px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #4B2E2B;
+    border-radius: 10px;
+    padding: 80px 60px;
+}
+.registro h1 {
+    font-size:36px;
+    text-align: center;
+}
+.registro .caja_registro {
+    width: 100%;
+    height: 30px;
+    background:#ffffff ;
+    margin:30px 0px;
+}
+
+.caja_registro input {
+    width: 100%;
+    height: 100%;
+    background:transparent ;
+    border: 2px solid #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    color:#000;
+    padding: 20px 45px 20px 20px;
+}
+
+.registro .btn_registro{
+    width: 100%;
+    height: 60px;
+    background: #4B2E2B;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    border:none;
+    cursor:pointer;
+    font-size: 16px;
+    color:#ffffff;
+    font-weight: 600;
+}
+.mante_sesion label input {
+    accent-color: #4B2E2B;
+    margin: 10px;
+}
+.mante_sesion a{
+    color:#4B2E2B;
+}
+.mante_sesion a:hover{
+    text-decoration: underline;
+}
+
 /* HTML DEL MAPA*/
 
 #map {
@@ -363,6 +696,25 @@ i:hover {
 
     justify-content: center;
     flex-direction: column;
+
+    transition: font-size 0.3s ease-in-out; /* Efecto de agrandado del texto */
+    }
+
+    /* 🔹 Efecto al pasar el mouse (hover) */
+    .icono-cafeteria .marcador:hover {
+    transform: scale(1.3); /* Hace que el marcador crezca un 30% */
+    z-index: 10000; /* Circulo encima del resto? REVISAR */
+    }
+
+    .icono-cafeteria .marcador:hover img {
+    transform: scale(1.1); /* se agranda la imagen */
+    }
+
+    .icono-cafeteria .marcador:hover .texto-cafeteria {
+    font-size: 10.3px; /* Aumenta el tamaño del texto para que sea más visible */
+    max-width: 90%; /* que el texto siga dentro del circulo */
+    }
+=======
     transition: font-size 0.3s ease-in-out;
     /* Efecto de agrandado del texto */
 }
@@ -386,5 +738,6 @@ i:hover {
     max-width: 90%;
     /* que el texto siga dentro del circulo */
 }
+
 
 
