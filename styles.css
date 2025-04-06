@@ -295,63 +295,76 @@ i:hover {
 }
 
 #carrusel2 {
-    margin-top: -30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60vh;
-    color: #331E1C;
+    padding: 20px 0;
 }
 
 #container_carrusel2 {
-    width: 89vw;
-    max-width: 2200px;
+    width: 95vw;
+    max-width: 1600px;
     overflow: hidden;
     position: relative;
 }
 
 #slider_container2 {
-    width: 100%;
     position: relative;
     overflow: hidden;
 }
 
 #slider2 {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: max-content;
+    transition: transform 0.5s ease;
     gap: 20px;
-
 }
 
+/* Imágenes */
 #slider2 img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
     border-radius: 20px;
+    flex-shrink: 0;
+    width: calc(100% / 4 - 15px);
+    object-fit: cover;
+    height: auto;
 }
 
-/* Botones de navegación */
+/* Responsive */
+@media (max-width: 1100px) {
+    #slider2 img {
+        width: calc(100% / 3 - 13.33px);
+    }
+}
+@media (max-width: 900px) {
+    #slider2 img {
+        width: calc(100% / 2 - 10px);
+    }
+}
+@media (max-width: 550px) {
+    #slider2 img {
+        width: 100%;
+    }
+}
+
 .btn_carrusel {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
 }
-
 .btn_carrusel:first-of-type {
     left: 10px;
 }
-
 .btn_carrusel:last-of-type {
     right: 10px;
+}
+.btn_carrusel.inactive {
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 
@@ -691,11 +704,6 @@ i:hover {
         width: calc(10% - 20px);
     }
 }
-
-
-
-
-
 
 /*Beneficios*/
 .Titulos {
