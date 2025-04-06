@@ -574,6 +574,15 @@ text-decoration: underline;
 
 /* HTML DEL MAPA*/
 
+    /*TITULO*/
+    .titulo-mapa {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+
     #map {
         width: 80%;
         height: 773px;
@@ -665,4 +674,40 @@ text-decoration: underline;
     font-size: 10.3px; /* Aumenta el tamaño del texto para que sea más visible */
     max-width: 90%; /* que el texto siga dentro del circulo */
     }
+
+    /*Pestaña deslizable del mapa*/
+    .cafeteria-tab {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 2px solid #ccc;
+        transition: transform 0.3s ease;
+        transform: translateY(80%); /* Oculta al inicio */
+        z-index: 10; /* Encima del mapa */
+    }
+      
+      .cafeteria-tab.open {
+        transform: translateY(0);
+      }
+      
+      .toggle-button {
+        width: 100%;
+        background: #eee;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      
+      .cafeteria-list {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 15px;
+      }
+      
+
+    
 

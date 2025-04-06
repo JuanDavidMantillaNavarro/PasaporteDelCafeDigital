@@ -29,7 +29,23 @@
     </a>
     
     </header>
-    <div id="map"></div>
+    
+        <div id="map"></div>
+            <!-- Titulo-->
+            <div class="titulo-mapa">Mapa de la ciudad</div>
+
+            <!-- Pestaña con cafeterías -->
+            <div class="cafeteria-tab" id="cafeteriaTab">
+                <button class="toggle-button" onclick="toggleTab()">⬆️</button>
+                <div class="cafeteria-list" id="cafeteriaList">
+                  <div class="icono-cafeteria" onclick="scrollToPosition(100, 200)"></div>
+                  <div class="icono-cafeteria" onclick="scrollToPosition(300, 400)"></div>
+                  <div class="icono-cafeteria" onclick="scrollToPosition(500, 600)"></div>
+                </div>
+            </div>
+        </div>
+    
+
     <script>
         var map = L.map('map').setView([4.6512695589245565, -74.07262681705785], 13); // Coordenadas iniciales
 
@@ -71,5 +87,22 @@
                 .addTo(map)
                 .bindPopup("<b>" + cafeteria.nombre + "</b><br>Dirección: "+ cafeteria.dir);
         });
+
+        // Función para mover el mapa al punto de una cafetería
+        function scrollToPosition(x, y) {
+        const mapImage = document.getElementById('mapImage');
+        mapImage.style.transform = `translate(${-x}px, ${-y}px)`;
+        }
+
+        function toggleTab() {
+        const tab = document.getElementById('cafeteriaTab');
+        tab.classList.toggle('open');
+
+        // Cambiar ícono de botón
+        const button = tab.querySelector('.toggle-button');
+        button.textContent = tab.classList.contains('open') ? '⬇️' : '⬆️';
+        }
+
     </script>
+
 <body>
