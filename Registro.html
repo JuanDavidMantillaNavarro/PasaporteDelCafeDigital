@@ -3,33 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Registro</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo">
-        <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
-    </a>
-    <nav>
-        <ul>
-            <a href="pasaporte.html" class="nav-link">Tu pasaporte</a>
-            <a href="Beneficios.html" class="nav-link">Beneficios</a>
-            <a href="Cafeterias.html" class="nav-link">Cafeterías</a>
-            <a href="Mapa.html" class="nav-link">Mapa Cafeterías</a>
-        </ul>
-    </nav>
-    <a href="Usuario.html" class="usuario">
-        <i class="bi bi-person-circle"></i>
-    </a>
-</header>
+    <header>
+        <a href="index.html" class="logo">
 
+            <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
+
+        </a>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="pasaporte.html" class="nav-link">Tu pasaporte</a></li>
+                <li><a href="Beneficios.html" class="nav-link">Beneficios</a></li>
+                <li><a href="Cafeterias.html" class="nav-link">Cafeterias</a></li>
+                <li><a href="Mapa.html" class="nav-link">Mapa Cafeterias</a></li>
+            </ul>
+        </nav>
+
+
+        <a href="Usuario.html" class="usuario">
+            <i class="bi bi-person-circle"></i>
+        </a>
+
+
+        <i class="bi bi-list" id="hamburguesa"></i>
+
+    </header>
 <div class="Cont_registro">
     <div class="registro">
         <form action="">
-            <h1>Regístrate</h1>
+            <h1 class="registrate">Regístrate</h1>
             <div class="caja_registro">
                 <input type="text" placeholder="Nombre" required>
             </div>
