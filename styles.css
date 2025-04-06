@@ -14,6 +14,7 @@ header {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
+    height: 140px;
     min-height: 70px;
     background-color: #4B2E2B;
     justify-content: space-between;
@@ -101,7 +102,7 @@ nav a:hover {
 
 /* PANTALLA PRINCIPAL */
 #contenidocarrusel {
-    height: 400px;
+    height: 600px;
     overflow: hidden;
 
 }
@@ -273,10 +274,10 @@ i:hover {
 
 /*CARRUSEL*/
 #txt_tituloc {
-    font-family: "Poppins", sans-serif;
-    margin-top: 50px;
-    margin-left: 100px;
-    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5vw;       /* Tamaño de fuente relativo al ancho de la pantalla */
+    margin-top: 5vh;       /* Margen superior relativo a la altura del viewport */
+    margin-left: 6vw;      /* Margen izquierdo relativo al ancho del viewport */
 }
 
 #carrusel2 {
@@ -339,6 +340,320 @@ i:hover {
     right: 10px;
 }
 
+
+/* CONTENEDOR DEL CARRUSEL DE MANTILLA */
+
+#contenedorcarruseldescuentos {
+    width: 96%;
+    height: 400px;
+    margin: 40px auto;
+    /* Centrado horizontal */
+    background-color: #E5D8C7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Para que no se salga el carrusel */
+}
+
+
+/* CONTENEDOR CIRCULOS */
+
+#contenedorcirculos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 96vw;
+    background-color: #E5D8C7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+}
+
+.circulo {
+
+    width: 10vw;/* El ancho será el 10% del ancho de la pantalla */
+    height: 10vw;/* Mantiene la proporción para que siga siendo un círculo */
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.circulo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Negro con transparencia */
+    z-index: 1;
+}
+
+.circulo:hover {
+    transform: scale(1.05);
+}
+
+.primeralineacafes {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;  
+    padding: 30px 70px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+
+
+.nombrescafeterias {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra en ambos ejes */
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    width: 90%;
+}
+
+
+.infocafe{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; 
+    width: 50%;
+    height: 50%;
+    background-color: #331E1C; /* Color de fondo */
+    padding: 20px; /* Relleno para que el contenido no toque los bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    z-index: 1000;
+}
+ .infocafe.visible{
+    opacity: 1;
+    visibility: visible;
+ }
+
+ .textocajas {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #E6D5B8 !important; /* Cambia el color de la letra */
+    font-size: 4rem; 
+    margin-left:2rem ;
+    text-align: center;
+}
+
+.parrafocajas{
+    font-family: 'Poppins', sans-serif;
+    color: #E6D5B8 !important; 
+    font-size: 1.3rem; 
+    margin-left:2rem ;
+
+}
+
+.Imagencajatexto{
+
+    float: left;
+    margin-right: 15px; 
+    margin-top: 80px;
+    width: 200px;
+ }
+
+ #cerrar{
+    
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px; 
+ }
+ #cerrar i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrardos{
+    
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px; 
+ }
+ 
+ #cerrardos i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+ 
+ #cerrartres{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrartres i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrarcuatro{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarcuatro i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrarcinco{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarcinco i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrarseis{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarseis i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+
+ #cerrarsiete{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarsiete i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrarocho{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarocho i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrarnueve{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrarnueve i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+
+ #cerrardiez{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrardiez i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerraronce{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerraronce i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrardoce{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+ #cerrardoce i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
+ #cerrartrece{
+    border: none; 
+    background: none; 
+    position: absolute; /* Posiciona el botón en relación a su contenedor */
+    top: 10px; 
+    left: 10px;  
+ }
+
+
+ #cerrartrece i{
+    font-size: 4rem;
+    color: #E6D5B8;
+    cursor: pointer;
+ }
+
 @media only screen and (min-width: 1100px) {
     #slider_container2 #slider2 .slider2 {
         width: calc(2.5% - 20px);
@@ -362,6 +677,11 @@ i:hover {
         width: calc(10% - 20px);
     }
 }
+
+
+
+
+
 
 /*Beneficios*/
 .Titulos {
@@ -1037,7 +1357,7 @@ i:hover {
     flex-wrap: wrap;
     padding: 20px;
     gap: 40px;
-  }
+}
 
 .titulocomofunciona {
     color: #4B2E2B;
@@ -1147,7 +1467,22 @@ i:hover {
     .carrusel-item {
         width: 80vw;
         /* View width */
-        margin: 15px;
+        margin: 40px;
+    }
+
+    .circulo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nombrescafeterias {
+        font-size: 10px;
+    }
+
+
+    #txt_tituloc {
+        font-size: 15px;
+        margin-left: 20px;
     }
 
     .textopasaporte {
@@ -1171,25 +1506,28 @@ i:hover {
         flex-direction: column;
         align-items: center;
         padding: 10px;
-      }
+    }
 
-      .imagencomofunciona {
+    .imagencomofunciona {
         width: 90vw;
         max-width: 100%;
-      }
-      .titulocomofunciona{
+    }
+
+    .titulocomofunciona {
         font-size: 28px;
         margin: 0 auto;
-        
-      }
-      .titulospequeños {
+
+    }
+
+    .titulospequeños {
         font-size: 20px;
         margin: 0 auto;
-      }
-      .parrafoscomofunciona {
+    }
+
+    .parrafoscomofunciona {
         font-size: 16px;
         text-align: justify;
         margin: 0 auto;
-      }
+    }
 
 }
