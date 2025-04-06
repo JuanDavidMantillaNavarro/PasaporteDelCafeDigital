@@ -1,42 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Tu pasaporte</title>
-  
+
 </head>
-<body>
+
+<!-- HEADER -->
+
+<body class="fondosellos"><!-- FONDO DE LA PAGINA-->
     <header>
         <a href="index.html" class="logo">
-        
+
             <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
-        
+
         </a>
-        
-        <nav>
+
+        <nav class="menu">
             <ul>
-                <a href="pasaporte.html"class="nav-link" >Tu pasaporte</a>
-                <a href="Beneficios.html"class="nav-link" >Beneficios</a>
-                <a href="Cafeterias.html"class="nav-link" >Cafeterias</a>
-                <a href="Mapa.html"class="nav-link" >Mapa Cafeterias</a>
+                <li><a href="pasaporte.html" class="nav-link">Tu pasaporte</a></li>
+                <li><a href="Beneficios.html" class="nav-link">Beneficios</a></li>
+                <li><a href="Cafeterias.html" class="nav-link">Cafeterias</a></li>
+                <li><a href="Mapa.html" class="nav-link">Mapa Cafeterias</a></li>
             </ul>
         </nav>
-        
-        <a href="Usuario.html"class="usuario">
+
+
+        <a href="Usuario.html" class="usuario">
             <i class="bi bi-person-circle"></i>
         </a>
-        
-        </header>
 
 
-        
+        <i class="bi bi-list" id="hamburguesa"></i>
+
+    </header>
+
+
+    <div class="flechaspasaporte">
+        <a href="#" id="flechaIzquierda">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+        </a>
+        <a href="#" id="flechaDerecha">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+        </a>
+
+    </div>
+
+
+    
+
+       <!-- TITULO DE LA PAGINA-->
+    <div class="textopasaporte">
+        <h2>Pasaporte del Café</h2>
+    </div>
+
+
+    <!-- EMPIEZA EL SLIDER-->
+    <div class="contenedor-scroll">
+        <div id="contenedorgeneral"> <!-- CONTENEDOR DEL SLIDER-->
+
+
+
+            <!-- CONTENEDOR CAFÉ COFFEE STYLERS-->
+            <div class="carrusel-item" data-codigo="1234">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/coffeestylers.png" alt="Logo coffee stylers"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/sellocoffeestylers.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                    
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+            <!-- CONTENEDOR CAFÉ GONZALEZ-->
+            <div class="carrusel-item" data-codigo="5678">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/cafegonzalez.png" alt="Logo cafegonzalez"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/cafegonzalezsello.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+            <!-- CONTENEDOR CRANEO SACRAL-->
+            <div class="carrusel-item" data-codigo="9101112">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/craneosacral.png" alt="Logo craneo sacral"
+                    class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/craneosacralsello.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+            <!-- CONTENEDOR ENAMORADOS-->
+            <div class="carrusel-item" data-codigo="13141516">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/enamorados.png" alt="Logo coffee stylers"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/enamoradossello.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+            <!-- CONTENEDOR CAFE DEL MERCADO-->
+            <div class="carrusel-item" data-codigo="17181920">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/cafedelmercado.png" alt="Logo enamorados"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/sellocafedelmercado.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
 
 
 
 
 
+            <!-- CONTENEDOR LOS AMANTES DEL CAFE-->
+            <div class="carrusel-item" data-codigo="21222324">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/losamantesdelcafe.png" alt="Logo enamorados"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/sellolosamantesdelcafe.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+            <!-- CONTENEDOR LA TINTERIA-->
+            <div class="carrusel-item" data-codigo="25262728">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/latinteria.png" alt="Logo La tinteria"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/latinteriasello.jpeg" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+            <!-- CONTENEDOR VRONX60-->
+            <div class="carrusel-item" data-codigo="29303132">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/vronx.png" alt="Logo Vronx"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/sellovronx.png" alt="sello" class="sello"
+                            style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- CONTENEDOR QUIPILE-->
+            <div class="carrusel-item" data-codigo="33343536">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/quipile.png" alt="Logo quipile"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/selloquipile.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+
+            <!-- CONTENEDOR CAFE RACER-->
+            <div class="carrusel-item" data-codigo="37383940">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/racer.png" alt="Logo Racer"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/selloracer.png" alt="sello" class="sello"
+                            style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+            <!-- CONTENEDOR NIEBLA-->
+            <div class="carrusel-item" data-codigo="41424344">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/niebla.png" alt="Logo Niebla"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/selloniebla.png" alt="sello" class="sello"
+                            style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+
+            <!-- CONTENEDOR JAGUAR-->
+            <div class="carrusel-item" data-codigo="45464748">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/jaguar.png" alt="Logo jaguar" class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/sellojaguar.png" alt="sello" class="sello"
+                            style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+            </div>
+
+
+
+
+
+
+            <!-- CONTENEDOR AGUITA NEGRA-->
+            <div class="carrusel-item" data-codigo="49505152">
+
+                <div class="logocafe" id="cafeuno">
+                    <img src="Imagenes/carruselpasaporte/aguitanegra.png" alt="Logo Aguita Negra"class="logoscafes">
+                </div>
+
+                <div class="paginapasaporte">
+
+                    <div class="paginascarrusel" id="primera">
+                        <img src="Imagenes/carruselpasaporte/fondopasaporte.jpg" alt="Hoja pasaporte"
+                            class="fondo-pasaporte">
+                        <img src="Imagenes/carruselpasaporte/compassfondo.png" alt="compass logo" class="fondo-compass">
+                        <img id="selloImagen" src="Imagenes/carruselpasaporte/selloaguitanegra.png" alt="sello"
+                            class="sello" style="display: none;">
+                    </div>
+
+
+
+                </div>
+
+                <div class="contenedor-codigo">
+                    <input type="text" id="codigoInput" placeholder="Ingresa tu código">
+                    <button onclick="validarCodigo()" class="icono-boton">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="contenedor-estrellas estrellas-container" style="display: none;">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                  </div>
+
+            </div>
+
+
+            
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="pasaporte.js"></script>
 </body>
+
 </html>

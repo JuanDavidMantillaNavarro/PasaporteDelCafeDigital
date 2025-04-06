@@ -1,112 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Pasaporte del café</title>
-   
+    <title>Tu pasaporte</title>
+
 </head>
-<body>
-    
+
 <header>
-<a href="index.html" class="logo">
+    <a href="index.html" class="logo">
 
-    <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
+        <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
 
-</a>
+    </a>
 
-<nav>
-    <ul>
-        <a href="pasaporte.html"class="nav-link" >Tu pasaporte</a>
-        <a href="Beneficios.html"class="nav-link" >Beneficios</a>
-        <a href="Cafeterias.html"class="nav-link" >Cafeterias</a>
-        <a href="Mapa.html"class="nav-link" >Mapa Cafeterias</a>
-    </ul>
-</nav>
+    <nav class="menu">
+        <ul>
+            <li><a href="pasaporte.html" class="nav-link">Tu pasaporte</a></li>
+            <li><a href="Beneficios.html" class="nav-link">Beneficios</a></li>
+            <li><a href="Cafeterias.html" class="nav-link">Cafeterias</a></li>
+            <li><a href="Mapa.html" class="nav-link">Mapa Cafeterias</a></li>
+        </ul>
+    </nav>
 
-<a href="Usuario.html"class="usuario">
-    <i class="bi bi-person-circle"></i>
-</a>
+
+    <a href="Usuario.html" class="usuario">
+        <i class="bi bi-person-circle"></i>
+    </a>
+
+
+    <i class="bi bi-list" id="hamburguesa"></i>
 
 </header>
 
-<div id="contenidocarrusel">
+<body>
 
-    <div class="itemcarrusel">
-        <div class="tarjetacarrusel" id="tarjetacarrusel-1"> 
-            <img src="Imagenes/Carrusel1.png" alt="Imagen cafe y pasaporte del café">
-            <div class="contenido-superpuesto">
-                <h2>¿CÓMO FUNCIONA EL PASAPORTE DIGITAL?</h2>
-                
+
+
+    <div id="contenidocarrusel">
+
+        <div class="itemcarrusel">
+            <div class="tarjetacarrusel" id="tarjetacarrusel-1">
+                <img src="Imagenes/Carrusel1.png" alt="Imagen cafe y pasaporte del café">
+                <div class="contenido-superpuesto">
+                    <h2 class="titulounoprimercarrusel">¿CÓMO FUNCIONA EL PASAPORTE DIGITAL?</h2>
+
+                </div>
+
+
+                <div class="boton1">
+                    <a href="ComoFunciona.html">Más información</a>
+                </div>
+
             </div>
 
-            
-            <div class="boton1">
-                <a href="ComoFunciona.html">Más información</a>
-            </div>
-            
-        </div>
-        
-        <div class="flechascarrusel">
-            <a href="#tarjetacarrusel-3">
-                <i class="bi bi-arrow-left"></i>
-            </a>
-         <a href="#tarjetacarrusel-2">
-            <i class="bi bi-arrow-right"></i>
-          </a>
+            <div class="flechascarrusel">
+                <a href="#tarjetacarrusel-3">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a href="#tarjetacarrusel-2">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
 
+            </div>
         </div>
+
+        <div class="itemcarrusel">
+            <div class="tarjetacarrusel" id="tarjetacarrusel-2">
+                <img src="Imagenes/Carrusel2.png" alt="Imagen pasaporte del cafe">
+                <div class="contenido-superpuesto-2">
+                    <h2 class="titulodosprimercarrusel">¡TU VIAJE POR LOS MEJORES CAFÉS COMIENZA AQUÍ!</h2>
+                </div>
+
+                <div class="boton2">
+                    <a href="pasaporte.html">Tu pasaporte</a>
+                </div>
+
+
+            </div>
+            <div class="flechascarrusel">
+                <a href="#tarjetacarrusel-1">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a href="#tarjetacarrusel-3">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="itemcarrusel">
+            <div class="tarjetacarrusel" id="tarjetacarrusel-3">
+                <img src="Imagenes/Carrusel3.png" alt="Imagen cafeteria">
+
+                <div class="contenido-superpuesto-3">
+                    <h2 class="titulotresprimercarrusel">ENCUENTRA TU CAFÉ MÁS CERCANO</h2>
+                </div>
+
+                <div class="boton3">
+                    <a href="Mapa.html">Explora el mapa</a>
+                </div>
+
+            </div>
+            <div class="flechascarrusel">
+                <a href="#tarjetacarrusel-2">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a href="#tarjetacarrusel-1">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
-
-    <div class="itemcarrusel">
-        <div class="tarjetacarrusel" id="tarjetacarrusel-2"> 
-            <img src="Imagenes/Carrusel2.png" alt="Imagen pasaporte del cafe">
-            <div class="contenido-superpuesto-2">
-                <h2>¡TU VIAJE POR LOS MEJORES CAFÉS COMIENZA AQUÍ!</h2>
-            </div>
-
-            <div class="boton2">
-                <a href="pasaporte.html">Tu pasaporte</a>
-            </div>
-            
-
-        </div>
-        <div class="flechascarrusel">
-            <a href="#tarjetacarrusel-1">
-                <i class="bi bi-arrow-left"></i>
-            </a>
-            <a href="#tarjetacarrusel-3">
-                <i class="bi bi-arrow-right"></i>
-              </a>
-        </div>
-    </div>
-
-    <div class="itemcarrusel">
-        <div class="tarjetacarrusel" id="tarjetacarrusel-3"> 
-            <img src="Imagenes/Carrusel3.png" alt="Imagen cafeteria">
-            
-            <div class="contenido-superpuesto-3">
-                <h2>ENCUENTRA TU CAFÉ MÁS CERCANO</h2>
-            </div>
-
-            <div class="boton3">
-                <a href="Mapa.html">Explora el mapa</a>
-            </div>
-            
-        </div>
-        <div class="flechascarrusel">
-            <a href="#tarjetacarrusel-2">
-                <i class="bi bi-arrow-left"></i>
-            </a>
-            <a href="#tarjetacarrusel-1">
-                <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-    
-</div>
     <div id="txt_tituloc">
         <h2>ESPECIALIDADES DE LAS CAFETERÍAS</h2>
     </div>
@@ -115,24 +124,365 @@
             <div id="slider_container2">
                 <span onclick="sliderLeft()" class="btn_carrusel">&lt;</span>
                 <div id="slider2">
-                <img id="cafe1" src="carrusel2/cafe1.PNG" alt="Imagen de café 1">
-                <img id="cafe2" src="carrusel2/cafe2.jpg" alt="Imagen de café 2">
-                <img id="cafe3" src="carrusel2/cafe3.jpg" alt="Imagen de café 3">
-                <img id="cafe4" src="carrusel2/cafe4.jpg" alt="Imagen de café 4">
-                <img id="cafe5" src="carrusel2/cafe5.jpg" alt="Imagen de café 5">
-                <img id="cafe6" src="carrusel2/cafe6.jpg" alt="Imagen de café 6">
-                <img id="cafe7" src="carrusel2/cafe7.jpg" alt="Imagen de café 7">
-                <img id="cafe8" src="carrusel2/cafe8.jpg" alt="Imagen de café 8">
-                <img id="cafe9" src="carrusel2/cafe9.jpg" alt="Imagen de café 9">
-                <img id="cafe10" src="carrusel2/cafe10.jpg" alt="Imagen de café 10">
-                <img id="cafe11" src="carrusel2/cafe11.jpg" alt="Imagen de café 11">
-                <img id="cafe12" src="carrusel2/cafe12.jpg" alt="Imagen de café 12">
-                <img id="cafe13" src="carrusel2/cafe13.jpg" alt="Imagen de café 13">
+                    <img id="cafe1" src="carrusel2/cafe1.PNG" alt="Imagen de café 1">
+                    <img id="cafe2" src="carrusel2/cafe2.jpg" alt="Imagen de café 2">
+                    <img id="cafe3" src="carrusel2/cafe3.jpg" alt="Imagen de café 3">
+                    <img id="cafe4" src="carrusel2/cafe4.jpg" alt="Imagen de café 4">
+                    <img id="cafe5" src="carrusel2/cafe5.jpg" alt="Imagen de café 5">
+                    <img id="cafe6" src="carrusel2/cafe6.jpg" alt="Imagen de café 6">
+                    <img id="cafe7" src="carrusel2/cafe7.jpg" alt="Imagen de café 7">
+                    <img id="cafe8" src="carrusel2/cafe8.jpg" alt="Imagen de café 8">
+                    <img id="cafe9" src="carrusel2/cafe9.jpg" alt="Imagen de café 9">
+                    <img id="cafe10" src="carrusel2/cafe10.jpg" alt="Imagen de café 10">
+                    <img id="cafe11" src="carrusel2/cafe11.jpg" alt="Imagen de café 11">
+                    <img id="cafe12" src="carrusel2/cafe12.jpg" alt="Imagen de café 12">
+                    <img id="cafe13" src="carrusel2/cafe13.jpg" alt="Imagen de café 13">
                 </div>
                 <span onclick="sliderRight()" class="btn_carrusel">&gt;</span>
             </div>
         </div>
     </div>
+
+
+
+    <!-- CARRUSEL MANTILLA-->
+    <div id="txt_tituloc">
+        <h2>DESCUENTOS DISPONIBLES UNICAMENTE EN TIENDA</h2>
+    </div>
+    <div id="contenedorcarruseldescuentos">
+        <h2>CARRUSEL MANTILLA</h2>
+    </div>
+
+
+    <!-- CIRCULOS DE LAS CAFETERIAS-->
+    <div id="txt_tituloc">
+        <h2>CAFETERIAS ALIADAS</h2>
+    </div>
+
+
+
+    <div id="contenedorcirculos">
+
+
+        <!-- INFORMACIÓN COFFE STYLERS-->
+        <div class="infocafe" id="coffeStylersInfo">
+            <button id="cerrar"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/coffestylers.jpeg" alt="Imagen Coffe Stylers">
+            <h1 class="textocajas">Coffee Stylers</h1>
+            <p class="parrafocajas">Somos la comunidad que ve el café como estilo de vida, diseñamos un
+                espacio único para ti para vivir experiencias entorno al café de
+                especialidad conectando con comunidades caficultoras a lo largo de
+                nuestra tierra querida, uniendo así la pasión por el café y la locura del arte.
+                Somos un estudio creativo enfocado en ilustración y muralismo, el proposito es poder
+                crear diversidad de conceptos artísticos entorno al café de especialidad para brindarles algo diferente.
+                Somos soñadores, amamos lo que hacemos, vibramos diferente y lo mejor de todo es que queremos
+                que tu seas parte de todo esto.</p>
+        </div>
+
+
+        <!-- INFORMACIÓN CAFÉ GONZALEZ-->
+        <div class="infocafe" id="cafegonzalezInfo">
+            <button id="cerrardos"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/cafegonzalezz.webp" alt="Imagen Café Gonzalez">
+            <h1 class="textocajas">Café González</h1>
+            <p class="parrafocajas">Nos enorgullece ser un legado familiar que trasciende
+                generaciones, dedicado a ofrecer un café impregnado de auténtica tradición.
+                Más allá de una simple bebida, nuestro compromiso va más allá, contribuyendo
+                activamente a la sostenibilidad ambiental, social y laboral en los campos de café.
+                Café González es más que una marca, es el fruto del trabajo justo, la creación de
+                oportunidades y la ilusión de nuevas generaciones que encuentran en el café no solo
+                una bebida, sino una poderosa oportunidad de cambio.</p>
+        </div>
+
+
+
+        <!-- INFORMACIÓN CRANEO SACRAL-->
+        <div class="infocafe" id="craneosacralInfo">
+            <button id="cerrartres"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/craneosacral.webp" alt="Imagen Craneo Sacral">
+            <h1 class="textocajas">Craneo Sacral</h1>
+            <p class="parrafocajas">ENERGÍA Y EQUILIBRIO es nuestro slogan y abarca todo en nuestro
+                concepto, entendiendo la unión del café(todo su proceso hasta llegar a la taza y
+                las mil conversaciones alrededor de él) con el Bienestar(damos clases de Yoga y
+                talleres guiados al cuido y autoconocimiento)</p>
+        </div>
+
+
+
+        <!-- INFORMACIÓN LOS AMANTES DEL CAFÉ-->
+        <div class="infocafe" id="losamantesdelcafeInfo">
+            <button id="cerrarcuatro"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/losamantesdelcafe.jpeg"
+                alt="Imagen Los Amantes del café">
+            <h1 class="textocajas">Los amantes del café</h1>
+            <p class="parrafocajas">Somos un café de especialidad, somos tostadores y educadores del café
+                colombiano. En nuestro local encontrarás una buena variedad de acompañamientos dulces y de
+                sal libres de ingredientes de origen animal. Promovemos la cultura cafetera, buscamos llevar
+                las mejores tazas de café a nuestros visitantes, por esto compramos nuestro caféaproductores
+                con los mejores estándares de calidad y de diferentes orígenes. o Utilizamos las últimas
+                tendencias de preparación en café. Ofrecemos cursos, talleres, productos y servicios para los
+                amantes de esta maravillosa bebida y para quienes hacen quieren hacer parte del mundo del café.
+                Acompáñanos en esta aventura y compartan nuestro amor por el café Colombiano.</p>
+        </div>
+
+
+
+        <!-- INFORMACIÓN CAFÉ DEL MERCADO-->
+        <div class="infocafe" id="cafedelmercadoInfo">
+            <button id="cerrarcinco"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/cafedelmercado.jpeg" alt="Imagen café del mercado">
+            <h1 class="textocajas">CAFÉ DEL MERCADO</h1>
+            <p class="parrafocajas">Desde el ventanal de este café, la vista de Plaza Del Chorro
+                De Quevedo es estupenda. Si prefieres la cocina colombiana, merece la pena que
+                conozcas Café del Mercado. Muchos de sus clientes piden su magnífico café.</p>
+        </div>
+
+
+
+        <!-- INFORMACIÓN NIEBLA-->
+        <div class="infocafe" id="nieblaInfo">
+            <button id="cerrarseis"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/niebla.jpeg" alt="Imagen Niebla">
+            <h1 class="textocajas">NIEBLA</h1>
+            <p class="parrafocajas">Somos una tienda de café de especialidad enfocada en
+                generar experiencias sensoriales para nuestros clientes. De la misma forma
+                buscamos una cadena de valor mas trasparente y justa, donde con una relación
+                dorecta con el caficultor buscamos generar mas valor para la industria y para
+                el consumidor de cafes especiales</p>
+        </div>
+
+
+        <!-- INFORMACIÓN LA TINTERIA-->
+        <div class="infocafe" id="tinteriaInfo">
+            <button id="cerrarsiete"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/latinteria.webp" alt="Imagen La tinteria">
+            <h1 class="textocajas">LA TINTERÍA</h1>
+            <p class="parrafocajas">El Café la Tintería es un proyecto que nació en el 2015 como
+                una barra de café, y que durante algún tiempo estuvo en La Candelaria. La pandemia
+                se presentó con muchos retos para La Tintería pero unieron fuerzas y para dicha nuestra
+                llegaron a una hermosa casa tradicional de conservación arquitectónica en nuestro
+                #DistritoCH. Este renovado espacio es un lugar en el que podrás disfrutar de productos de
+                producción local, compartir lecturas o trabajar en un ambiente tranquilo, todo ambientado con
+                un delicioso aroma al mejor café colombiano.</p>
+        </div>
+
+
+
+
+        <!-- INFORMACIÓN ENAMORADOS-->
+        <div class="infocafe" id="enamoradosInfo">
+            <button id="cerrarocho"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/enamorados.jpeg" alt="Imagen Enamorados">
+            <h1 class="textocajas">ENAMORADOS</h1>
+            <p class="parrafocajas">Enamorados Café nace en 2023 en el barrio Santa Teresita;
+                epicentro de manifestaciones culturales; lugar donde se encuentran importantes
+                librerías y restaurantes y uno de los barrios donde se han grabado el mayor número
+                de telenovelas que hoy son reconocidas a nivel mundial como: La hija del mariachi;
+                Yo soy Betty, la fea; El inútil; La mariposa; Los canarios; Hasta que la plata nos
+                separe, entre otras... Razones de sobra para que turistas de todo el mundo quieran
+                visitarnos, para conocer algo de la historia de la casa y además para tener la oportunidad
+                de disfrutar de una taza de café premium, preparada con un método especial para extraer
+                y resaltar las notas que caracterizan al café colombiano como el más famoso del mundo,
+                una distinción que nos llena de orgullo.</p>
+        </div>
+
+
+        <!-- INFORMACIÓN AGUITA NEGRA-->
+        <div class="infocafe" id="aguitanegraInfo">
+            <button id="cerrarnueve"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/aguitanegra.jpeg" alt="Aguita Negra">
+            <h1 class="textocajas">AGUITA NEGRA</h1>
+            <p class="parrafocajas">Somos un café de especialidad de origen santandereano en el cual
+                manejamos café de Santander. Ubicado en el centro de Bogotá, exactamente en el bello
+                barrio gastronómico de La Macarena. Contamos con una variedad de experiencias a base
+                de café, catas de café, bebidas de autor, métodos de filtrado y repostería de autor.</p>
+        </div>
+
+
+
+        <!-- INFORMACIÓN CAFE JAGUAR-->
+        <div class="infocafe" id="jaguarInfo">
+            <button id="cerrardiez"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/jaguar.jpeg" alt="Imagen Jaguar">
+            <h1 class="textocajas">CAFÉ JAGUAR</h1>
+            <p class="parrafocajas">Jaguar Coffee Bogotá es una casa de reunión para los amantes del café.
+                En nuestra casa más que tomar un café, vivirás una experiencia alrededor del café. Somos
+                productores de Silvania Cundinamarca, de allí traemos múltiples variedades de café.
+                En nuestra tienda, procesamos, tostamos y catamos todos nuestros cafés. 
+                Toda esta organización detrás nos permite ofrecer cafés de alta calidad. Junto con nuestros
+                baristas y tostadores experimentados, nos permitimos enseñar en el arte del barismo para crear
+                una comunidad más amplia de conocedores del buen café.</p>
+        </div>
+
+
+        <!-- INFORMACIÓN RACER-->
+        <div class="infocafe" id="racerInfo">
+            <button id="cerraronce"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/racer.jpeg" alt="Imagen Café Racer">
+            <h1 class="textocajas">CAFÉ RACER</h1>
+            <p class="parrafocajas">En 2022 se empezó con el sueño de unir nuestras pasiones más
+                grandes: motocicletas vintage y café de especialidad. Lo que comenzó como una
+                visión para crear una marca de estilo de vida se convirtió en el espacio de todos.
+                Seguimos enseñándole a los motociclistas sobre buen café y a los amantes del café
+                sobre motos.</p>
+        </div>
+
+
+        <!-- INFORMACIÓN QUIPILE-->
+        <div class="infocafe" id="quipileInfo">
+            <button id="cerrardoce"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/quipilee.jpg" alt="Imagen Café Quipile">
+            <h1 class="textocajas">CAFÉ QUIPILE</h1>
+            <p class="parrafocajas">Quipile Coffee es uno de los primeros cafés de especialidad 
+                de Bogotá, 12 años en el mercado nos hacen una tienda de cafés especiales distinta 
+                a las del sector, dónde más que un café de especialidad somos un café de experiencias 
+                e interacción con nuestros clientes… Ven y disfruta nuestros cafés los cuales vienen 
+                directo de caficultores amigos.. tostamos sus cafés y van directo a tu taza respetando 
+                siempre la economía solidaria.</p>
+        </div>
+
+
+
+
+          <!-- INFORMACIÓN VRONX 60-->
+          <div class="infocafe" id="vronxInfo">
+            <button id="cerrartrece"><i class="bi bi-x"></i></button>
+            <img class="Imagencajatexto" src="Imagenes/cajasdetexto/vronxx.jpeg" alt="Imagen Café Quipile">
+            <h1 class="textocajas">VRONX 60</h1>
+            <p class="parrafocajas">Café de especialidad que busca generar cultura cafetera en 
+                habitantes y visitantes del Bronx de Bogotá. Ofrecemos Cafés de diferentes 
+                regiones de Colombia en una amplia gama de preparaciones y les enseñamos a 
+                nuestros clientes cómo él café cambia dependiendo su origen y tipo de beneficio.
+                Enseñamos la historia del café desde su descubrimiento hasta la actualidad. 
+                Hacemos catas de café y experiencias cafeteras. Les contamos a los visitantes 
+                que paso y qué está pasando en el Bronx en la actualidad.</p>
+        </div>
+
+
+        <!-- CIRCULOS CAFES-->
+        <div class="primeralineacafes">
+
+
+            <!-- CIRCULO COFFE STYLERS-->
+            <div class="circulo" id="botoncoffestylers"
+                style="background-image: url('Imagenes/cafeterias/coffestylers.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Coffe Stylers</span>
+                </div>
+            </div>
+
+
+
+            <!-- CIRCULO CAFÉ GONZALEZ-->
+            <div class="circulo" id="botoncafegonzalez"
+                style="background-image: url('Imagenes/cafeterias/cafegonzalez.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Café González</span>
+                </div>
+            </div>
+
+
+            <!-- CIRCULO CRANEO SACRAL-->
+            <div class="circulo" id="botoncraneosacral"
+                style="background-image: url('Imagenes/cafeterias/craneosacral.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Craneo Sacral</span>
+                </div>
+            </div>
+
+
+            <!-- CIRCULO LOS AMANTES DEL CAFÉ-->
+            <div class="circulo" id="botonamantesdelcafe"
+                style="background-image: url('Imagenes/cafeterias/losamantesdelcafe.jpg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Los amantes del café</span>
+                </div>
+            </div>
+
+            <!-- CIRCULO CAFÉ DEL MERCADO-->
+            <div class="circulo" id="botoncafedelmercado"
+                style="background-image: url('Imagenes/cafeterias/cafedelmercado.jpg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Café del mercado</span>
+                </div>
+            </div>
+
+            <!-- CIRCULO NIEBLA-->
+            <div class="circulo" id="botonniebla" style="background-image: url('Imagenes/cafeterias/niebla.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Niebla</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="primeralineacafes">
+
+            <!-- CIRCULO TINTERIA-->
+            <div class="circulo" id="botontinteria"
+                style="background-image: url('Imagenes/cafeterias/latinteria.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">La Tinteria</span>
+                </div>
+            </div>
+
+            <!-- CIRCULO ENAMORADOS-->
+            <div class="circulo" id="botonenamorados"
+                style="background-image: url('Imagenes/cafeterias/enamorados.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Enamorados</span>
+                </div>
+            </div>
+
+            <!-- CIRCULO AGUITA NEGRA-->
+            <div class="circulo" id="botonaguitanegra"
+                style="background-image: url('Imagenes/cafeterias/aguitanegra.jpg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Aguita Negra</span>
+                </div>
+            </div>
+
+            <!-- CIRCULO JAGUAR-->
+            <div class="circulo" id="botonjaguar" style="background-image: url('Imagenes/cafeterias/jaguar.jpg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Café Jaguar</span>
+                </div>
+            </div>
+            <!-- CIRCULO RACER-->
+            <div class="circulo" id="botonracer" style="background-image: url('Imagenes/cafeterias/racer.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Café Racer</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="primeralineacafes">
+            <!-- CIRCULO QUIPILE-->
+            <div class="circulo"  id="botonquipile" style="background-image: url('Imagenes/cafeterias/quipile.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Quipile</span>
+                </div>
+            </div>
+            <!-- CIRCULO VRONX 60-->
+            <div class="circulo" id="botonvronx" style="background-image: url('Imagenes/cafeterias/vronx.jpeg');">
+                <div class="overlay">
+                    <span class="nombrescafeterias">Vronx 60</span>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
