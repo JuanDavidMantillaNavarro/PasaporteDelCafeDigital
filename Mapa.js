@@ -69,7 +69,6 @@ cafeterias.forEach(function(cafeteria) {
            icono.classList.add('icono-tab');
            icono.style.width = '111px';
            icono.style.height = '111px';
-           console.log(cafeteria.imagen);
            icono.style.backgroundImage = `url(${encodeURI(cafeteria.imagen)})`;
            icono.style.backgroundSize = 'cover';
            icono.style.borderRadius = '50%';
