@@ -145,14 +145,58 @@
 
 
 
-    <!-- CARRUSEL MANTILLA-->
+    <!-- CARRUSEL DESCUENTOS-->
     <div id="txt_tituloc">
         <h2>DESCUENTOS DISPONIBLES UNICAMENTE EN TIENDA</h2>
     </div>
     <div id="contenedorcarruseldescuentos">
-        <h2>CARRUSEL MANTILLA</h2>
+        <div id="container_carrusel3">
+            <div id="slider_container3">
+                <span onclick="sliderLeft3()" class="btn_carrusel3">&lt;</span>
+                <div id="slider3">
+                    <div class="card">
+                        <p  class="nombrePromo"><strong>Café + Croassaint</strong></p>
+                        <img id="Promo1" src="Imagenes/PROMOS/Cafe y croassaint.jpg" alt="Café + croassaint">
+                        <p class="precio"><strong>12.000$ -20%</strong><br><s>15.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café + Galleta</p>
+                        <img id="Promo2" src="Imagenes/PROMOS/capucchino + galleta.png" alt="Café + galleta">
+                        <p class="precio"><strong>10.500$ -25%</strong><br><s>14.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café expresso x2</p>
+                        <img id="Promo3" src="Imagenes/PROMOS/2 x1 expresso.png" alt="Café expresso x2">
+                        <p class="precio"><strong>6.500$ Promo</strong><br><s>13.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café bolsa 240gr</p>
+                        <img id="Promo4" src="Imagenes/PROMOS/vronx 60 cafe grano.png" alt="Café bolsa 240gr">
+                        <p class="precio"><strong>18.900$ -16%</strong><br><s>22.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Jugo mora</p>
+                        <img id="Promo5" src="Imagenes/PROMOS/jugo mora.png" alt="Jugo mora">
+                        <p class="precio"><strong>6.500$ Promo</strong><br><s>9.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Capucchino + Pie</p>
+                        <img id="Promo6" src="Imagenes/PROMOS/Cafe capucchino + pie manzana.png" alt="Capucchino + Pie">
+                        <p class="precio"><strong>15.750$ -30%</strong><br><s>22.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Blue Ice x2</p>
+                        <img id="Promo7" src="Imagenes/PROMOS/x2 blue ice.png" alt="Blue Ice x2">
+                        <p class="precio"><strong>26.800$ -10%</strong><br><s>29.800$</s></p>
+                    </div>
+                
+                </div>
+                <span onclick="sliderRight3()" class="btn_carrusel3">&gt;</span>
+            </div>
+        </div>
     </div>
 
+    
 
     <!-- CIRCULOS DE LAS CAFETERIAS-->
     <div id="txt_tituloc">
@@ -483,6 +527,45 @@
     </div>
 
     <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
+            </a>
+        </div>
+    
+        <div class="footer-info">
+            <div class="footer-card">
+                <a href="#" class="footer-btn">Contáctanos por nuestras redes sociales</a>
+            </div>
+            <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+        </div>
+    
+        <div class="footer-redes">
+            <p class="footer-titulo">Nuestras redes sociales</p>
+            <ul>
+                <li><i class="bi bi-instagram"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-facebook"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-youtube"></i> PasaportedelCafeCo</li>
+            </ul>
+        </div>
+    </footer>
+    
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+          En Compass pasaporte usamos cookies para mejorar su experiencia en nuestro sitio web sin descuidar la protección de sus datos personales. En consecuencia, Compass pasaporte utiliza cookies estrictamente necesarias, de rendimiento, funcionales y de marketing.
+          <a href="Cookies.html">Ver detalle en nuestra <span class="link">política de cookies</span></a>.
+          ¿Consiente el uso de las Cookies?
+        </p>
+        <div class="cookie-buttons">
+          <button id="accept-cookies">Aceptar</button>
+          <button id="reject-cookies">Rechazar</button>
+        </div>
+      </div>
+      
+
 </body>
 
 </html>

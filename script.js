@@ -1,77 +1,55 @@
-var container = document.getElementById('container_carrusel2');
-var slider = document.getElementById('slider2');
-var slides = slider.getElementsByTagName('img').length; 
-var buttons = document.getElementsByClassName('btn_carrusel');
+const container = document.getElementById('container_carrusel2');
+const slider = document.getElementById('slider2');
+const images = slider.querySelectorAll('img');
+const buttons = document.getElementsByClassName('btn_carrusel');
 
-var currentPosition = 0;
-var currentMargin = 0;
-var slidesPerPage = 0;
-var slidesCount = slides - slidesPerPage;
-var containerWidth = container.offsetWidth;
-var moveStep = 1;
+let currentPosition = 0;
+let slidesPerPage = 4;
 
-window.addEventListener("resize", checkWidth);
-setParams(containerWidth);
+window.addEventListener("resize", setParams);
+setParams();
 
-function checkWidth() {
-    containerWidth = container.offsetWidth;
-    setParams(containerWidth);
-}
+function setParams() {
+    const width = window.innerWidth;
 
-function setParams(w) {
-    if (w < 551) {
+    if (width <= 550) {
         slidesPerPage = 1;
-    } else if (w < 901) {
+    } else if (width <= 900) {
         slidesPerPage = 2;
-    } else if (w < 1101) {
+    } else if (width <= 1100) {
         slidesPerPage = 3;
     } else {
         slidesPerPage = 4;
     }
 
-    slidesCount = slides - slidesPerPage;
-    if (currentPosition > slidesCount) {
-        currentPosition = slidesCount;
-    }
-
-    currentMargin = -currentPosition * (100 / slidesPerPage);
-    slider.style.marginLeft = currentMargin + '%';
-
-    updateButtons();
+    updateSlider();
 }
 
 function sliderRight() {
-    if (currentPosition < slidesCount) {
+    const maxPosition = images.length - slidesPerPage;
+    if (currentPosition < maxPosition) {
         currentPosition++;
-    } else {
-        currentPosition = slidesCount;
+        updateSlider();
     }
-    
-    currentMargin = -currentPosition * (100 / slidesPerPage);
-    slider.style.marginLeft = currentMargin + '%';
-    updateButtons();
 }
 
 function sliderLeft() {
     if (currentPosition > 0) {
         currentPosition--;
-    } else {
-        currentPosition = 0;
+        updateSlider();
     }
-    
-    currentMargin = -currentPosition * (100 / slidesPerPage);
-    slider.style.marginLeft = currentMargin + '%';
-    updateButtons();
 }
 
-function updateButtons() {
+function updateSlider() {
+    const imageWidth = images[0].offsetWidth + 20; // incluye el gap
+    slider.style.transform = `translateX(-${currentPosition * imageWidth}px)`;
+
     buttons[0].classList.toggle('inactive', currentPosition === 0);
-    buttons[1].classList.toggle('inactive', currentPosition >= slidesCount);
+    buttons[1].classList.toggle('inactive', currentPosition >= images.length - slidesPerPage);
 }
 
-var btn_carruselLeft = buttons[0];
-var btn_carruselRight = buttons[1];
-var alternateImages = {
+// Hover para cambiar imagen
+const alternateImages = {
     "cafe1": "carrusel2/cafe2c.png",
     "cafe2": "carrusel2/cafe2c.png",
     "cafe3": "carrusel2/cafe3c.png",
@@ -87,20 +65,13 @@ var alternateImages = {
     "cafe13": "carrusel2/cafe13c.png"
 };
 
-var images = document.querySelectorAll("#slider2 img");
-
 images.forEach(img => {
-    var originalSrc = img.src;
-    var hoverSrc = alternateImages[img.id]; 
+    const originalSrc = img.src;
+    const hoverSrc = alternateImages[img.id];
 
     if (hoverSrc) {
-        img.addEventListener("mouseover", function() {
-            img.src = hoverSrc; 
-        });
-
-        img.addEventListener("mouseout", function() {
-            img.src = originalSrc; 
-        });
+        img.addEventListener("mouseover", () => img.src = hoverSrc);
+        img.addEventListener("mouseout", () => img.src = originalSrc);
     }
 });
 
@@ -316,3 +287,102 @@ cerrartrece.addEventListener("click", ()=>{
 
     vronxInfo.classList.remove("visible");
 })
+
+
+//SLIDER DESCUENTOS
+
+const container2 = document.getElementById('container_carrusel3');
+const slider2 = document.getElementById('slider3');
+const images2 = slider2.querySelectorAll('img');
+const buttons2 = document.getElementsByClassName('btn_carrusel3');
+
+let currentPosition2 = 0;
+let slidesPerPage2 = 4;
+
+window.addEventListener("resize", setParams);
+setParams3();
+
+function setParams3() {
+    const width = window.innerWidth;
+
+    if (width <= 550) {
+        slidesPerPage2 = 1;
+    } else if (width <= 900) {
+        slidesPerPage2 = 2;
+    } else if (width <= 1100) {
+        slidesPerPage2 = 3;
+    } else {
+        slidesPerPage2 = 4;
+    }
+
+    updateSlider3();
+}
+
+function sliderRight3() {
+    const maxPosition = images2.length - slidesPerPage2;
+    if (currentPosition2 < maxPosition) {
+        currentPosition2++;
+        updateSlider3();
+    }
+}
+
+function sliderLeft3() {
+    if (currentPosition2 > 0) {
+        currentPosition2--;
+        updateSlider3();
+    }
+}
+
+function updateSlider3() {
+    const imageWidth = images2[0].offsetWidth + 150; // incluye el gap 150
+    slider2.style.transform = `translateX(-${currentPosition2 * imageWidth}px)`;
+
+    buttons2[0].classList.toggle('inactive', currentPosition2 === 0);
+    buttons2[1].classList.toggle('inactive', currentPosition2 >= images2.length - slidesPerPage2);
+}
+
+// Hover para cambiar imagen de promo a qr
+const alternateImages2 = {
+    "Promo1": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo2": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo3": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo4": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo5": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo6": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo7": "Imagenes/PROMOS/qr coffe stylers .png"
+};
+
+images2.forEach(img => {
+    const originalSrc2 = img.src;
+    const hoverSrc2 = alternateImages2[img.id];
+
+    if (hoverSrc2) {
+        img.addEventListener("mouseover", () => img.src = hoverSrc2);
+        img.addEventListener("mouseout", () => img.src = originalSrc2);
+    }
+});
+
+
+//COOKIES
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+  
+    // Si ya hay un dato no mostrar las cookies
+    if (localStorage.getItem("cookieConsent")) {
+      cookieBanner.style.display = "none";
+    }
+    
+    //Guardar dato local
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "accepted");
+      cookieBanner.style.display = "none";
+    });
+  
+    rejectBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "rejected");
+      cookieBanner.style.display = "none";
+    });
+  });
