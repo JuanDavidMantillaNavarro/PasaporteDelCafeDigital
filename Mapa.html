@@ -38,22 +38,28 @@
 <div id="txt_tituloc">
     <h3>Mapa de la ciudad</h3>
 </div>
-        <div id="map"></div>
-        
+    <div id ="map-container">
+        <div id="map">
             <!-- Pestaña con cafeterías -->
             <div class="cafeteria-tab" id="cafeteriaTab">
                 <button class="toggle-button" onclick="toggleTab()">⬆️</button>
                 <div class="cafeteria-list" id="cafeteriaList">
-                  <div class="icono-cafeteria" onclick="scrollToPosition(100, 200)"></div>
-                  <div class="icono-cafeteria" onclick="scrollToPosition(300, 400)"></div>
-                  <div class="icono-cafeteria" onclick="scrollToPosition(500, 600)"></div>
                 </div>
             </div>
         </div>
+        <template id="template-marcador">
+            <div class="marcador">
+              <div class="overlay"></div>
+              <img src="" alt="">
+              <div class="texto-cafeteria"></div>
+            </div>
+          </template>
+            
+    </div>
+    
+    <script src="Mapa.js"></script>
     
 
-    
-<script src="Mapa.js"></script>
 
 <footer class="footer">
     <div class="footer-logo">

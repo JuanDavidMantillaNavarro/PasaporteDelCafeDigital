@@ -334,14 +334,14 @@ function sliderLeft3() {
 }
 
 function updateSlider3() {
-    const imageWidth = images2[0].offsetWidth + 150; // incluye el gap
+    const imageWidth = images2[0].offsetWidth + 150; // incluye el gap 150
     slider2.style.transform = `translateX(-${currentPosition2 * imageWidth}px)`;
 
     buttons2[0].classList.toggle('inactive', currentPosition2 === 0);
     buttons2[1].classList.toggle('inactive', currentPosition2 >= images2.length - slidesPerPage2);
 }
 
-// Hover para cambiar imagen
+// Hover para cambiar imagen de promo a qr
 const alternateImages2 = {
     "Promo1": "Imagenes/PROMOS/qr coffe stylers .png",
     "Promo2": "Imagenes/PROMOS/qr coffe stylers .png",
@@ -362,3 +362,27 @@ images2.forEach(img => {
     }
 });
 
+
+//COOKIES
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+  
+    // Si ya hay un dato no mostrar las cookies
+    if (localStorage.getItem("cookieConsent")) {
+      cookieBanner.style.display = "none";
+    }
+    
+    //Guardar dato local
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "accepted");
+      cookieBanner.style.display = "none";
+    });
+  
+    rejectBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "rejected");
+      cookieBanner.style.display = "none";
+    });
+  });

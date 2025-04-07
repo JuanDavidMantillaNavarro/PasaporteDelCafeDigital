@@ -35,35 +35,75 @@ var cafeterias = [
     { nombre: "Café González", lat: 4.665287941020146, lng: -74.05523370356526, dir: "Sede 2 Av Cl 80 #12-55", imagen: "Imagenes/Foto Cafeterias/cafe Gonzalez 5-min.webp" },
 ];
 
+var lista = document.getElementById('cafeteriaList');
+
 cafeterias.forEach(function(cafeteria) {
 
     // Icono cafeterias
-    let iconoCafe = L.divIcon({
-    className: 'icono-cafeteria',
-    html: `<div class="marcador">
-           <div class="overlay"></div>  
-           <img src="${cafeteria.imagen}" alt="${cafeteria.nombre}">
-           <div class="texto-cafeteria">${cafeteria.nombre}</div> 
-       </div>`,
-    iconAnchor: [25, 25] 
-});
+       // se clona el template de los marcadores del mapa
+       let template = document.getElementById('template-marcador');
+       let marcador = template.content.cloneNode(true);
+   
+       // Asignamos valores de forma dinamica
+       marcador.querySelector('img').src = cafeteria.imagen;
+       marcador.querySelector('img').alt = cafeteria.nombre;
+       marcador.querySelector('.texto-cafeteria').textContent = cafeteria.nombre;
+   
+       // Se convierte el marcador HTML a string
+       let div = document.createElement('div');
+       div.appendChild(marcador);
+       let marcadorHTML = div.innerHTML;
+   
+       // Creamos el icono
+       let iconoCafe = L.divIcon({
+           className: 'icono-cafeteria',
+           html: marcadorHTML,
+           iconAnchor: [25, 25]
+       });
+   
+       L.marker([cafeteria.lat, cafeteria.lng], { icon: iconoCafe })
+           .addTo(map)
+           .bindPopup("<b>" + cafeteria.nombre + "</b><br>Dirección: " + cafeteria.dir);
 
-    L.marker([cafeteria.lat, cafeteria.lng], { icon: iconoCafe })
-        .addTo(map)
-        .bindPopup("<b>" + cafeteria.nombre + "</b><br>Dirección: "+ cafeteria.dir);
-});
+           const icono = document.createElement('div');
+           icono.classList.add('icono-tab');
+           icono.style.width = '111px';
+           icono.style.height = '111px';
+           console.log(cafeteria.imagen);
+           icono.style.backgroundImage = `url(${encodeURI(cafeteria.imagen)})`;
+           icono.style.backgroundSize = 'cover';
+           icono.style.borderRadius = '50%';
+           icono.style.flex = '0 0 auto';
+           icono.style.cursor = 'pointer';
+           icono.title = cafeteria.nombre;
 
-// Función para mover el mapa al punto de una cafetería
-function scrollToPosition(x, y) {
-const mapImage = document.getElementById('mapImage');
-mapImage.style.transform = `translate(${-x}px, ${-y}px)`;
+           // Capa oscura
+           const overlay = document.createElement('div');
+           overlay.classList.add('overlay');
+           icono.appendChild(overlay);
+
+           // Texto encima
+           const texto = document.createElement('div');
+           texto.classList.add('texto-cafeteria');
+           texto.innerText = cafeteria.nombre;
+           icono.appendChild(texto);
+       
+           icono.onclick = function () {
+               scrollToPosition(cafeteria.lat, cafeteria.lng);
+           };
+           lista.appendChild(icono);
+   });
+
+// Funcion para mover el mapa al punto de una cafetería
+function scrollToPosition(lat, lng) {
+    map.setView([lat, lng], 15); // Zoom de 15
 }
 
 function toggleTab() {
 const tab = document.getElementById('cafeteriaTab');
 tab.classList.toggle('open');
 
-// Cambiar ícono de botón
+// Cambiar icono de boton al abrir o cerrar
 const button = tab.querySelector('.toggle-button');
 button.textContent = tab.classList.contains('open') ? '⬇️' : '⬆️';
 }
