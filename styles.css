@@ -158,20 +158,23 @@ i:hover {
     height: 100%;
 }
 
+
+
 .contenido-superpuesto {
     position: absolute;
     top: 30vh;
     right: 9vw;
-    /* Alinea el contenido hacia la derecha */
     text-align: center;
-    /* Alinea el texto a la derecha */
     color: #4B2E2B;
     background: rgba(230, 213, 184, 0.5);
-    /* Fondo semitransparente */
     padding: 20px;
     border-radius: 10px;
     max-width: 40%;
-    /* Controla el ancho del contenido */
+    z-index: 10;
+    display: flex;               /* 👉 convierte en contenedor flex */
+    flex-direction: column;     /* 👉 apila verticalmente */
+    align-items: center;        /* 👉 centra horizontalmente */
+    gap: 15px;           
 }
 
 .titulounoprimercarrusel {
@@ -199,16 +202,13 @@ i:hover {
   }
 
 .boton1 a {
-    position: absolute;
-    top: 43vh;
-    right: 19vw;
-    text-align: center;
-    color: #F5F5F5;
-    background: #331E1C;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
-    z-index: 10;
+    background-color: #4B2E2B;
+    color: #D9C4A0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 30;
 
 }
 
@@ -221,32 +221,28 @@ i:hover {
     position: absolute;
     top: 30vh;
     right: 50vw;
-    /* Alinea el contenido hacia la derecha */
     text-align: center;
-    /* Alinea el texto a la derecha */
     color: #D9C4A0;
-    background: rgb(76, 136, 186, 0.5);
-    /* Fondo semitransparente */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
-    /* Controla el ancho del contenido */
-}
-
-.boton2 a {
-    position: absolute;
-    top: 43vh;
-    right: 64vw;
-    /* Alinea el contenido hacia la derecha */
-    text-align: center;
-    /* Alinea el texto a la derecha */
-    color: #331E1C;
-    background: #C0B093;
-    /* Fondo semitransparente */
+    background: rgba(76, 136, 186, 0.5); /* Fondo semitransparente */
     padding: 20px;
     border-radius: 10px;
     max-width: 40%;
     z-index: 10;
+    display: flex;            /* 👈 Activa flexbox */
+    flex-direction: column;  /* 👈 Apila texto y botón verticalmente */
+    align-items: center;     /* 👈 Centra horizontalmente */
+    gap: 15px;               /* 👈 Espacio entre elementos */
+    
+}
+
+.boton2 a {
+    background-color: #D9C4A0;
+    color: #4B2E2B;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 30;
 }
 
 .boton2 a:hover {
@@ -260,26 +256,24 @@ i:hover {
     right: 37vw;
     text-align: center;
     color: #331E1C;
-    background: rgb(217, 196, 160, 0.5);
+    background: rgba(217, 196, 160, 0.5); /* Fondo semitransparente */
     padding: 20px;
     border-radius: 10px;
+    z-index: 10;
+    display: flex;              /* Flexbox para alinear */
+    flex-direction: column;    /* Elementos en columna */
+    align-items: center;       /* Centrado horizontal */
+    gap: 15px;                 /* Espacio entre título y botón */
 }
 
 .boton3 a {
-    position: absolute;
-    top: 43vh;
-    right: 44vw;
-    /* Alinea el contenido hacia la derecha */
-    text-align: center;
-    /* Alinea el texto a la derecha */
-    color: #FFFFFF;
-    background: #331E1C;
-    /* Fondo semitransparente */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
-    /* Ancho del contenido */
-    z-index: 10;
+    background-color: #331E1C;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .boton3 a:hover {
