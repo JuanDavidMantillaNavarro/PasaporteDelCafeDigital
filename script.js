@@ -287,3 +287,102 @@ cerrartrece.addEventListener("click", ()=>{
 
     vronxInfo.classList.remove("visible");
 })
+
+
+//SLIDER DESCUENTOS
+
+const container2 = document.getElementById('container_carrusel3');
+const slider2 = document.getElementById('slider3');
+const images2 = slider2.querySelectorAll('img');
+const buttons2 = document.getElementsByClassName('btn_carrusel3');
+
+let currentPosition2 = 0;
+let slidesPerPage2 = 4;
+
+window.addEventListener("resize", setParams);
+setParams3();
+
+function setParams3() {
+    const width = window.innerWidth;
+
+    if (width <= 550) {
+        slidesPerPage2 = 1;
+    } else if (width <= 900) {
+        slidesPerPage2 = 2;
+    } else if (width <= 1100) {
+        slidesPerPage2 = 3;
+    } else {
+        slidesPerPage2 = 4;
+    }
+
+    updateSlider3();
+}
+
+function sliderRight3() {
+    const maxPosition = images2.length - slidesPerPage2;
+    if (currentPosition2 < maxPosition) {
+        currentPosition2++;
+        updateSlider3();
+    }
+}
+
+function sliderLeft3() {
+    if (currentPosition2 > 0) {
+        currentPosition2--;
+        updateSlider3();
+    }
+}
+
+function updateSlider3() {
+    const imageWidth = images2[0].offsetWidth + 150; // incluye el gap 150
+    slider2.style.transform = `translateX(-${currentPosition2 * imageWidth}px)`;
+
+    buttons2[0].classList.toggle('inactive', currentPosition2 === 0);
+    buttons2[1].classList.toggle('inactive', currentPosition2 >= images2.length - slidesPerPage2);
+}
+
+// Hover para cambiar imagen de promo a qr
+const alternateImages2 = {
+    "Promo1": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo2": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo3": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo4": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo5": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo6": "Imagenes/PROMOS/qr coffe stylers .png",
+    "Promo7": "Imagenes/PROMOS/qr coffe stylers .png"
+};
+
+images2.forEach(img => {
+    const originalSrc2 = img.src;
+    const hoverSrc2 = alternateImages2[img.id];
+
+    if (hoverSrc2) {
+        img.addEventListener("mouseover", () => img.src = hoverSrc2);
+        img.addEventListener("mouseout", () => img.src = originalSrc2);
+    }
+});
+
+
+//COOKIES
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+  
+    // Si ya hay un dato no mostrar las cookies
+    if (localStorage.getItem("cookieConsent")) {
+      cookieBanner.style.display = "none";
+    }
+    
+    //Guardar dato local
+    acceptBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "accepted");
+      cookieBanner.style.display = "none";
+    });
+  
+    rejectBtn.addEventListener("click", function () {
+      localStorage.setItem("cookieConsent", "rejected");
+      cookieBanner.style.display = "none";
+    });
+  });
