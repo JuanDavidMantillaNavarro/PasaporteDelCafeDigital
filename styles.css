@@ -495,12 +495,20 @@ font-size: 12px;
 
 #contenedorcirculos {
     display: flex;
-    flex-direction: column;
     align-items: center;
     max-width: 96vw;
     background-color: #E5D8C7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px auto;
+}
+.lineacafes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 203.2px;  /* Espacio horizontal */
+    row-gap: 70px;        /* Espacio vertical, más pequeño */
+    padding: 20px;
+    max-width: 96vw;
 }
 
 .circulo {
@@ -535,14 +543,6 @@ font-size: 12px;
     transform: scale(1.05);
 }
 
-.primeralineacafes {
-    display: flex;
-    justify-content: center;
-    gap: 6vw;  
-    padding: 30px 70px;
-    width: max-content;
-    margin: 0 auto;
-}
 
 
 
@@ -564,6 +564,7 @@ font-size: 12px;
     visibility: hidden;
     position: absolute; 
     width: 45vw;
+    margin-left:25vw ;
     height: 50vh;
     background-color: #331E1C; /* Color de fondo */
     padding: 20px; /* Relleno para que el contenido no toque los bordes */
@@ -1159,11 +1160,10 @@ font-size: 12px;
 
 .logocafe {
     width: 130px;
-    /* Tamaño del logo */
     text-align: center;
-    /* Centra el contenido */
-    margin-bottom: 20px;
-    /* Espacio entre el logo y el carrusel */
+    min-height: 125PX;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .logocafe img {
@@ -1339,7 +1339,7 @@ font-size: 12px;
 .estrella.seleccionada {
     color: gold;
 }
-
+/* CIERRE PAGINA PASAPORTE*/
 
 
 /* PAGINA CÓMO FUNCIONA*/
@@ -1400,6 +1400,10 @@ font-size: 12px;
     height: 74vh;
     margin-top: 0.1vh;
 }
+
+/* CIERRE PAGINA CÓMO FUNCIONA*/
+
+
 
 /* 🔹 Media Query para evitar desorden en móviles */
 @media screen and (max-width: 768px) {
@@ -1620,7 +1624,10 @@ font-size: 12px;
         font-weight: bold;
         margin: 10px 0;
     }
-
+.mapatitulo{
+    color: #4B2E2B;
+    font-family: 'Bebas Neue', sans-serif;
+}
 #map-container{
     width: 100%;
     height: 100vh;
@@ -1742,6 +1749,11 @@ font-size: 12px;
 
 
 /*CAFETERIAS INFO*/
+
+.infocafeteriastitulo{
+    color: #4B2E2B;
+     font-family: 'Bebas Neue', sans-serif;
+}
 .cafeterias {
     display: flex;
     flex-wrap: wrap;
