@@ -21,7 +21,7 @@ window.onload = function() {
         let dataObject = Object.fromEntries(inputData.entries());
         //console.log(dataObject);
         
-        ajaxRequest("http://pasaportedigitaldelcafe.free.nf/registro.php", "POST", dataObject, function(response) {
+        ajaxRequest("https://pasaportedigitaldelcafe.free.nf/Backend/registro.php", "POST", dataObject, function(response) {
             console.log("Server Response:", response);
         });
        
