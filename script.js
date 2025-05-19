@@ -387,5 +387,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /*window.onload = function () {
+    ajaxRequest("https://pasaportedigitaldelcafe.free.nf/Backend/Check_Sesion.php", "GET", null,
+        function (response) {
+            const res = JSON.parse(response);
+            if (res.sesion === true) {
+                console.log("Sesión activa, correo:", res.correo);
+                // Mostrar cosas o mantener al usuario en la página
+            } else {
+                console.log("No hay sesión, redirigiendo...");
+                window.location.href = "login.html"; // o mostrar mensaje
+            }
+        }
+    );
+}
+
+*/
+
+
 
   
