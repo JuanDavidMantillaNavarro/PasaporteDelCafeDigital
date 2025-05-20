@@ -1,13 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const codigos = document.querySelectorAll(".contenedor-codigo");
+    const estrellass = document.querySelectorAll(".contenedor-estrellas");
+    const sesionIniciada = localStorage.getItem("SesiónIniciada");
 
 
+    if (sesionIniciada === "true") {
+            // Mostrar contenedores
+            codigos.forEach(elem => elem.style.display = "block");
+        } else {
+            // Ocultar contenedores
+            codigos.forEach(elem => elem.style.display = "none");
+            estrellass.forEach(elem => elem.style.display = "none");
+        }
+    
     function validarCodigo(event) {
         const contenedor = event.target.closest(".contenedor-codigo");
         const carrusel = contenedor.closest(".carrusel-item");
+        const estrellas = carrusel.querySelector(".contenedor-estrellas");
         const codigoCorrecto = carrusel.getAttribute("data-codigo");
         const codigoIngresado = contenedor.querySelector("input").value.trim();
         const sello = carrusel.querySelector(".sello");
-        const estrellas = carrusel.querySelector(".contenedor-estrellas");
+        
+
 
         console.log("Estrellas:", estrellas); // 🔍 Verifica si existe
 

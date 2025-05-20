@@ -1,12 +1,20 @@
 <?php
-/*error_reporting(E_ALL);
-ini_set('display_errors', 1);
-session_start();
-*/
-header("Access-Control-Allow-Origin: https://juandavidmantillanavarro.github.io");
+
+header("Access-Control-Allow-Origin: https://pasaportedigitaldelcafe.free.nf");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+
+session_set_cookie_params([
+    'lifetime' => 0,
+    'path' => '/',
+    'domain' => 'pasaportedigitaldelcafe.free.nf',
+    'secure' => true,  // Importante si usas HTTPS
+    'httponly' => true,
+    'samesite' => 'None'
+]);
+
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
@@ -35,6 +43,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
+    $_SESSION['autenticado'] = true;
+    $_SESSION['correo'] = $correo;
     echo json_encode(["status" => "ok", "message" => "Inicio de sesión exitoso"]);
 } else {
     echo json_encode(["status" => "fail", "message" => "Correo o contraseña incorrectos"]);
