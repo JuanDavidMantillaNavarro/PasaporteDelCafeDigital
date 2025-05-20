@@ -25,6 +25,7 @@ window.onload = function () {
                     alert("Inicio de sesión exitoso");
                     // Redireccionar a la página de usuario, por ejemplo:
                     window.location.href = "index.html";
+                    localStorage.setItem("SesiónIniciada", "true");
                 } else {
                     alert("Correo o contraseña incorrectos");
                 }
