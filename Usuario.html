@@ -25,9 +25,21 @@
     </nav>
 
 
-    <a href="Usuario.html" class="usuario">
+    <a href="#" class="usuario" id="linkUsuario">
         <i class="bi bi-person-circle"></i>
     </a>
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+        const sesionIniciada = localStorage.getItem("SesiónIniciada");
+        const linkUsuario = document.getElementById("linkUsuario");
+
+        if (sesionIniciada === "true") {
+            linkUsuario.setAttribute("href", "perfil.html");
+        } else {
+            linkUsuario.setAttribute("href", "Usuario.html");
+        }
+    });
+    </script>
 
 
     <i class="bi bi-list" id="hamburguesa"></i>
@@ -36,13 +48,13 @@
 <body>
     <div class="Cont_login">
         <div class="login">
-            <form action="">
+            <form action="" id="login">
                 <h1 class="inicioocuenta">Inicia sesión o crea una cuenta</h1>
                 <div class="caja_login">
-                    <input type="text" placeholder="Usuario" required>
+                    <input type="text" name="Usuario" placeholder="Usuario" required>
                 </div>
                 <div class="caja_login">
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" name="Contrasena" placeholder="Contraseña" required>
                 </div>
                 <div class="recordar_usario">
                     <label><input type="checkbox">Recuerdame</label>
@@ -56,7 +68,7 @@
         </div>
     </div>
 
-    <script src="Mapa.js"></script>
+    <script src="Usuario.js"></script>
 
     <footer class="footer">
         <div class="footer-logo">

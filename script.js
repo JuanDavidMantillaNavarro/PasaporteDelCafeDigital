@@ -9,6 +9,10 @@ let slidesPerPage = 4;
 window.addEventListener("resize", setParams);
 setParams();
 
+let SIniciada = false;
+
+
+
 function setParams() {
     const width = window.innerWidth;
 
@@ -288,7 +292,6 @@ cerrartrece.addEventListener("click", ()=>{
     vronxInfo.classList.remove("visible");
 })
 
-
 //SLIDER DESCUENTOS
 
 const container2 = document.getElementById('container_carrusel3');
@@ -341,8 +344,15 @@ function updateSlider3() {
     buttons2[1].classList.toggle('inactive', currentPosition2 >= images2.length - slidesPerPage2);
 }
 
-// Hover para cambiar imagen de promo a qr
-const alternateImages2 = {
+
+window.onload = function () {
+    verificarSesion(function (res) {
+        if (res.sesion === true) {
+         SIniciada = true;
+        }
+
+    // Hover para cambiar imagen de promo a qr
+    const alternateImages2 = {
     "Promo1": "Imagenes/PROMOS/qr coffe stylers .png",
     "Promo2": "Imagenes/PROMOS/qr coffe stylers .png",
     "Promo3": "Imagenes/PROMOS/qr coffe stylers .png",
@@ -350,18 +360,39 @@ const alternateImages2 = {
     "Promo5": "Imagenes/PROMOS/qr coffe stylers .png",
     "Promo6": "Imagenes/PROMOS/qr coffe stylers .png",
     "Promo7": "Imagenes/PROMOS/qr coffe stylers .png"
-};
+    };
 
-images2.forEach(img => {
+    const alternateImagesNlog = {
+    "Promo1": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo2": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo3": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo4": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo5": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo6": "Imagenes/PROMOS/Red_X.svg.png",
+    "Promo7": "Imagenes/PROMOS/Red_X.svg.png"
+    };
+
+    images2.forEach(img => {
     const originalSrc2 = img.src;
     const hoverSrc2 = alternateImages2[img.id];
-
-    if (hoverSrc2) {
+    const hoverSrcnoLog = alternateImagesNlog[img.id];
+    if(SIniciada==true)
+    {
+        if (hoverSrc2) {
         img.addEventListener("mouseover", () => img.src = hoverSrc2);
         img.addEventListener("mouseout", () => img.src = originalSrc2);
+        }
+    }else{
+        if (hoverSrcnoLog) {
+        img.addEventListener("mouseover", () => img.src = hoverSrcnoLog);
+        img.addEventListener("mouseout", () => img.src = originalSrc2);
+        }
     }
-});
+    });
 
+
+});
+};
 
 //COOKIES
 
@@ -386,6 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cookieBanner.style.display = "none";
     });
   });
+
 
 
   

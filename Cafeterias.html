@@ -25,9 +25,21 @@
     </nav>
 
 
-    <a href="Usuario.html" class="usuario">
+    <a href="#" class="usuario" id="linkUsuario">
         <i class="bi bi-person-circle"></i>
     </a>
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+        const sesionIniciada = localStorage.getItem("SesiónIniciada");
+        const linkUsuario = document.getElementById("linkUsuario");
+
+        if (sesionIniciada === "true") {
+            linkUsuario.setAttribute("href", "perfil.html");
+        } else {
+            linkUsuario.setAttribute("href", "Usuario.html");
+        }
+    });
+    </script>
 
 
     <i class="bi bi-list" id="hamburguesa"></i>
@@ -164,7 +176,7 @@
                 <p><strong>Calificación General: 3,9</strong></p>
             </div>
             <div class="cafeteria-image">
-                <img src="Imagenes/cafeterias/enamorados.jpg" alt="enaMORAdos Café">
+                <img src="Imagenes/cafeterias/Enamorados.jpg" alt="enaMORAdos Café">
             </div>
         </div>
     </div>

@@ -21,8 +21,26 @@ window.onload = function() {
         let dataObject = Object.fromEntries(inputData.entries());
         //console.log(dataObject);
         
-        ajaxRequest("https://pasaportedigitaldelcafe.free.nf/registro.php", "POST", dataObject, function(response) {
+        ajaxRequest("https://pasaportedigitaldelcafe.free.nf/Backend/registro.php", "POST", dataObject,
+            function(response) {
+            let res;
+        try {
+            res = JSON.parse(response);  
+        } catch (error) {
+            console.error("Respuesta no es JSON válido:", response);
+            alert("Correo ya utilizado, porfavor intente con otro");
+            return; // Salimos de la función para evitar errores
+        }
+            if (res.status === "ok") {
+            alert("Registro exitoso");
+            // Redireccionar a la página de usuario:
+            window.location.href = "Usuario.html";
             console.log("Server Response:", response);
+            }else{
+            console.log("Server Response:", response);
+            alert("Registro Invalido");
+            }
+        
         });
        
     });
@@ -32,14 +50,9 @@ window.onload = function() {
         xhr.open(method, url, true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log(xhr.responseText);
-
-                //let response = JSON.parse(xhr.responseText);
-                //console.log(response.correo);
-                
-                
-                //callback(JSON.parse(xhr.responseText));
+            if (xhr.readyState === 4) {
+                /*console.log(xhr.responseText);*/
+                callback(xhr.responseText);
             }
         };
         xhr.send(JSON.stringify(data));

@@ -39,8 +39,9 @@ $decodedData = json_decode($jsonData, true);
 
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
+    
 } else {
-    echo "Connected successfully";
+    
 }
 
 $nombre = $decodedData['nombre'];
@@ -51,9 +52,9 @@ $contrasena = $decodedData['contrasena'];
 $sql = "INSERT INTO `login` (`id`, `Nombre`, `Apellido`, `Correo`, `Contrasena`) VALUES (NULL, '". $nombre ."', '". $apellido ."', '". $correo ."', '". $contrasena ."')";
 
 if ($mysqli->query($sql) === TRUE) {
-    echo "ok";  
+    echo json_encode(["status" => "ok", "message" => "Registro exitoso"]); 
 } else {
-    echo "fail";
+    echo json_encode(["status" => "fail", "message" => "Registro erroneo"]);
 }
 
 
