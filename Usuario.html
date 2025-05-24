@@ -25,21 +25,9 @@
     </nav>
 
 
-    <a href="#" class="usuario" id="linkUsuario">
+    <a href="Usuario.html" class="usuario">
         <i class="bi bi-person-circle"></i>
     </a>
-    <script>
-    window.addEventListener("DOMContentLoaded", function () {
-        const sesionIniciada = localStorage.getItem("SesiónIniciada");
-        const linkUsuario = document.getElementById("linkUsuario");
-
-        if (sesionIniciada === "true") {
-            linkUsuario.setAttribute("href", "perfil.html");
-        } else {
-            linkUsuario.setAttribute("href", "Usuario.html");
-        }
-    });
-    </script>
 
 
     <i class="bi bi-list" id="hamburguesa"></i>
@@ -48,13 +36,13 @@
 <body>
     <div class="Cont_login">
         <div class="login">
-            <form action="" id="login">
+            <form action="">
                 <h1 class="inicioocuenta">Inicia sesión o crea una cuenta</h1>
                 <div class="caja_login">
-                    <input type="text" name="Usuario" placeholder="Usuario" required>
+                    <input type="text" placeholder="Usuario" required>
                 </div>
                 <div class="caja_login">
-                    <input type="password" name="Contrasena" placeholder="Contraseña" required>
+                    <input type="password" placeholder="Contraseña" required>
                 </div>
                 <div class="recordar_usario">
                     <label><input type="checkbox">Recuerdame</label>
@@ -67,32 +55,6 @@
             </form>
         </div>
     </div>
-
-    <script src="Usuario.js"></script>
-
-    <footer class="footer">
-        <div class="footer-logo">
-            <a href="index.html" class="logo">
-                <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
-            </a>
-        </div>
-    
-        <div class="footer-info">
-            <div class="footer-card">
-                <a href="#" class="footer-btn">Contáctanos por nuestras redes sociales</a>
-            </div>
-            <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
-        </div>
-    
-        <div class="footer-redes">
-            <p class="footer-titulo">Nuestras redes sociales</p>
-            <ul>
-                <li><i class="bi bi-instagram"></i> PasaportedelCafe.co</li>
-                <li><i class="bi bi-facebook"></i> PasaportedelCafe.co</li>
-                <li><i class="bi bi-youtube"></i> PasaportedelCafeCo</li>
-            </ul>
-        </div>
-    </footer>
 
 </body>
 </html>
