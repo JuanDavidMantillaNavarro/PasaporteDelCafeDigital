@@ -4,9 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P3N4QJB2');</script>
+    <!-- End Google Tag Manager -->
+
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+
+
+
     <title>Tu pasaporte</title>
 
 </head>
@@ -28,9 +47,21 @@
     </nav>
 
 
-    <a href="Usuario.html" class="usuario">
+    <a href="#" class="usuario" id="linkUsuario">
         <i class="bi bi-person-circle"></i>
     </a>
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+        const sesionIniciada = localStorage.getItem("SesiónIniciada");
+        const linkUsuario = document.getElementById("linkUsuario");
+
+        if (sesionIniciada === "true") {
+            linkUsuario.setAttribute("href", "perfil.html");
+        } else {
+            linkUsuario.setAttribute("href", "Usuario.html");
+        }
+    });
+    </script>
 
 
     <i class="bi bi-list" id="hamburguesa"></i>
@@ -41,6 +72,30 @@
 
 
 
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3N4QJB2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="aviso-cookies " id="aviso-cookies">
+        <img class="galleta" src="./img/cookie.svg" alt="Galleta">
+        <h3 class="titulo"> Cookies </h3>
+        <p class="parrafo"> En Compass pasaporte usamos cookies para mejorar su experiencia en nuestro sitio web sin
+            descuidar la protección de
+            sus datos personales. <br>En consecuencia, Compass pasaporte utiliza cookies estrictamente necesarias, de
+            rendimiento,
+            funcionales y de marketing.</p>
+        <button class="boton" id="btn-aceptar-cookies">Aceptar</button>
+        <button class="botonRechazar" id="btn-rechazar-cookies">Rechazar</button>
+        <a class="enlace" href="cookies.html">Aviso de cookies</a>
+    </div>
+
+
+    <div class="fondo-aviso-cookies " id="fondo-aviso-cookies"></div>
+
+
     <div id="contenidocarrusel">
 
         <div class="itemcarrusel">
@@ -48,13 +103,13 @@
                 <img src="Imagenes/Carrusel1.png" alt="Imagen cafe y pasaporte del café">
                 <div class="contenido-superpuesto">
                     <h2 class="titulounoprimercarrusel">¿CÓMO FUNCIONA EL PASAPORTE DIGITAL?</h2>
-
+                    <div class="boton1">
+                        <a href="ComoFunciona.html">Más información</a>
+                    </div>
                 </div>
 
 
-                <div class="boton1">
-                    <a href="ComoFunciona.html">Más información</a>
-                </div>
+
 
             </div>
 
@@ -74,11 +129,12 @@
                 <img src="Imagenes/Carrusel2.png" alt="Imagen pasaporte del cafe">
                 <div class="contenido-superpuesto-2">
                     <h2 class="titulodosprimercarrusel">¡TU VIAJE POR LOS MEJORES CAFÉS COMIENZA AQUÍ!</h2>
+                    <div class="boton2">
+                        <a href="pasaporte.html">Tu pasaporte</a>
+                    </div>
                 </div>
 
-                <div class="boton2">
-                    <a href="pasaporte.html">Tu pasaporte</a>
-                </div>
+
 
 
             </div>
@@ -98,11 +154,12 @@
 
                 <div class="contenido-superpuesto-3">
                     <h2 class="titulotresprimercarrusel">ENCUENTRA TU CAFÉ MÁS CERCANO</h2>
+                    <div class="boton3">
+                        <a href="Mapa.html">Explora el mapa</a>
+                    </div>
                 </div>
 
-                <div class="boton3">
-                    <a href="Mapa.html">Explora el mapa</a>
-                </div>
+
 
             </div>
             <div class="flechascarrusel">
@@ -145,13 +202,57 @@
 
 
 
-    <!-- CARRUSEL MANTILLA-->
+    <!-- CARRUSEL DESCUENTOS-->
     <div id="txt_tituloc">
         <h2>DESCUENTOS DISPONIBLES UNICAMENTE EN TIENDA</h2>
     </div>
     <div id="contenedorcarruseldescuentos">
-        <h2>CARRUSEL MANTILLA</h2>
+        <div id="container_carrusel3">
+            <div id="slider_container3">
+                <span onclick="sliderLeft3()" class="btn_carrusel3">&lt;</span>
+                <div id="slider3">
+                    <div class="card">
+                        <p class="nombrePromo"><strong>Café + Croassaint</strong></p>
+                        <img id="Promo1" src="Imagenes/PROMOS/Cafe y croassaint.jpg" alt="Café + croassaint">
+                        <p class="precio"><strong>12.000$ -20%</strong><br><s>15.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café + Galleta</p>
+                        <img id="Promo2" src="Imagenes/PROMOS/capucchino + galleta.png" alt="Café + galleta">
+                        <p class="precio"><strong>10.500$ -25%</strong><br><s>14.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café expresso x2</p>
+                        <img id="Promo3" src="Imagenes/PROMOS/2 x1 expresso.png" alt="Café expresso x2">
+                        <p class="precio"><strong>6.500$ Promo</strong><br><s>13.000$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Café bolsa 240gr</p>
+                        <img id="Promo4" src="Imagenes/PROMOS/vronx 60 cafe grano.png" alt="Café bolsa 240gr">
+                        <p class="precio"><strong>18.900$ -16%</strong><br><s>22.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Jugo mora</p>
+                        <img id="Promo5" src="Imagenes/PROMOS/jugo mora.png" alt="Jugo mora">
+                        <p class="precio"><strong>6.500$ Promo</strong><br><s>9.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Capucchino + Pie</p>
+                        <img id="Promo6" src="Imagenes/PROMOS/Cafe capucchino + pie manzana.png" alt="Capucchino + Pie">
+                        <p class="precio"><strong>15.750$ -30%</strong><br><s>22.500$</s></p>
+                    </div>
+                    <div class="card">
+                        <p class="nombrePromo">Blue Ice x2</p>
+                        <img id="Promo7" src="Imagenes/PROMOS/x2 blue ice.png" alt="Blue Ice x2">
+                        <p class="precio"><strong>26.800$ -10%</strong><br><s>29.800$</s></p>
+                    </div>
+
+                </div>
+                <span onclick="sliderRight3()" class="btn_carrusel3">&gt;</span>
+            </div>
+        </div>
     </div>
+
 
 
     <!-- CIRCULOS DE LAS CAFETERIAS-->
@@ -333,34 +434,34 @@
             <button id="cerrardoce"><i class="bi bi-x"></i></button>
             <img class="Imagencajatexto" src="Imagenes/cajasdetexto/quipilee.jpg" alt="Imagen Café Quipile">
             <h1 class="textocajas">CAFÉ QUIPILE</h1>
-            <p class="parrafocajas">Quipile Coffee es uno de los primeros cafés de especialidad 
-                de Bogotá, 12 años en el mercado nos hacen una tienda de cafés especiales distinta 
-                a las del sector, dónde más que un café de especialidad somos un café de experiencias 
-                e interacción con nuestros clientes… Ven y disfruta nuestros cafés los cuales vienen 
-                directo de caficultores amigos.. tostamos sus cafés y van directo a tu taza respetando 
+            <p class="parrafocajas">Quipile Coffee es uno de los primeros cafés de especialidad
+                de Bogotá, 12 años en el mercado nos hacen una tienda de cafés especiales distinta
+                a las del sector, dónde más que un café de especialidad somos un café de experiencias
+                e interacción con nuestros clientes… Ven y disfruta nuestros cafés los cuales vienen
+                directo de caficultores amigos.. tostamos sus cafés y van directo a tu taza respetando
                 siempre la economía solidaria.</p>
         </div>
 
 
 
 
-          <!-- INFORMACIÓN VRONX 60-->
-          <div class="infocafe" id="vronxInfo">
+        <!-- INFORMACIÓN VRONX 60-->
+        <div class="infocafe" id="vronxInfo">
             <button id="cerrartrece"><i class="bi bi-x"></i></button>
             <img class="Imagencajatexto" src="Imagenes/cajasdetexto/vronxx.jpeg" alt="Imagen Café Quipile">
             <h1 class="textocajas">VRONX 60</h1>
-            <p class="parrafocajas">Café de especialidad que busca generar cultura cafetera en 
-                habitantes y visitantes del Bronx de Bogotá. Ofrecemos Cafés de diferentes 
-                regiones de Colombia en una amplia gama de preparaciones y les enseñamos a 
+            <p class="parrafocajas">Café de especialidad que busca generar cultura cafetera en
+                habitantes y visitantes del Bronx de Bogotá. Ofrecemos Cafés de diferentes
+                regiones de Colombia en una amplia gama de preparaciones y les enseñamos a
                 nuestros clientes cómo él café cambia dependiendo su origen y tipo de beneficio.
-                Enseñamos la historia del café desde su descubrimiento hasta la actualidad. 
-                Hacemos catas de café y experiencias cafeteras. Les contamos a los visitantes 
+                Enseñamos la historia del café desde su descubrimiento hasta la actualidad.
+                Hacemos catas de café y experiencias cafeteras. Les contamos a los visitantes
                 que paso y qué está pasando en el Bronx en la actualidad.</p>
         </div>
 
 
         <!-- CIRCULOS CAFES-->
-        <div class="primeralineacafes">
+        <div class="lineacafes">
 
 
             <!-- CIRCULO COFFE STYLERS-->
@@ -413,12 +514,7 @@
                     <span class="nombrescafeterias">Niebla</span>
                 </div>
             </div>
-        </div>
 
-
-
-
-        <div class="primeralineacafes">
 
             <!-- CIRCULO TINTERIA-->
             <div class="circulo" id="botontinteria"
@@ -456,14 +552,8 @@
                     <span class="nombrescafeterias">Café Racer</span>
                 </div>
             </div>
-
-        </div>
-
-
-
-        <div class="primeralineacafes">
             <!-- CIRCULO QUIPILE-->
-            <div class="circulo"  id="botonquipile" style="background-image: url('Imagenes/cafeterias/quipile.jpeg');">
+            <div class="circulo" id="botonquipile" style="background-image: url('Imagenes/cafeterias/quipile.jpeg');">
                 <div class="overlay">
                     <span class="nombrescafeterias">Quipile</span>
                 </div>
@@ -475,14 +565,45 @@
                 </div>
             </div>
 
-
         </div>
+
 
 
 
     </div>
 
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
+            </a>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-card">
+                <a href="#" class="footer-btn">Contáctanos por nuestras redes sociales</a>
+            </div>
+            <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+        </div>
+
+        <div class="footer-redes">
+            <p class="footer-titulo">Nuestras redes sociales</p>
+            <ul>
+                <li><i class="bi bi-instagram"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-facebook"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-youtube"></i> PasaportedelCafeCo</li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="verificarSesion.js"></script>
     <script src="script.js"></script>
+    <script src="aviso-cookies.js"></script>
+
 </body>
 
 </html>

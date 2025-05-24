@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Cafeterias</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -24,12 +25,271 @@
     </nav>
 
 
-    <a href="Usuario.html" class="usuario">
+    <a href="#" class="usuario" id="linkUsuario">
         <i class="bi bi-person-circle"></i>
     </a>
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+        const sesionIniciada = localStorage.getItem("SesiónIniciada");
+        const linkUsuario = document.getElementById("linkUsuario");
+
+        if (sesionIniciada === "true") {
+            linkUsuario.setAttribute("href", "perfil.html");
+        } else {
+            linkUsuario.setAttribute("href", "Usuario.html");
+        }
+    });
+    </script>
 
 
     <i class="bi bi-list" id="hamburguesa"></i>
 
 </header>
 <body>
+
+   <!-- Titulo-->
+<div id="txt_tituloc">
+    <h3 class="infocafeteriastitulo">Información Cafeterias</h3>
+</div>
+
+<section class="cafeterias">
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Coffe Stylers</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cll 57 #19-35</strong><br>9:00 am - 7:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Café como estilo de vida.<br>Un espacio para creativos y amantes del café.</p>
+                    </div>
+                <p><strong>Calificación General: 4,8</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/Coffe Stylers mejorado.jpg" alt="Coffe Stylers">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café González</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 19 #123-60</strong><br>10:00 am - 6:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>50 años de tradición cafetera. Tradición, Maestría y Gratitud.</p>
+                    </div>
+                <p><strong>Calificación General: 4,7</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/cafegonzalez.jpeg" alt="Café González">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Craneo Sacral</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 8 #41-38</strong><br>10:00 am - 7:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Un café de especialidad. Aquí, cada espacio invita a la calma y al equilibrio.</p>
+                    </div>
+                <p><strong>Calificación General: 4,9</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/craneosacral.jpeg" alt="Craneo sacral">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Los amantes del café</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cll 26d #4-15</strong><br>10:00 am - 8:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Tienda de café que busca mezclar el arte y el sabor para la cultura cafetera.</p>
+                    </div>
+                <p><strong>Calificación General: 4,9</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/losamantesdelcafe.jpg" alt="Los amantes del Café">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café del mercado</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cr 2 #11-88</strong><br>10:00 am - 7:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Tostadores de café/Café de especialidad. Campeones de Aeropress.</p>
+                    </div>
+                <p><strong>Calificación General: 4,8</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/cafedelmercado.jpg" alt="Café del mercado">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café Niebla</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cll 116 #11c-50</strong><br>9:00 am - 7:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Café de Autor. Nuestra energía está enfocada en crear poesía sensorial.</p>
+                    </div>
+                <p><strong>Calificación General: 4,9</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/Niebla.jpg" alt="Café Niebla">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café de la Tintería</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cll 54a #4a-21 Piso 2</strong><br>8:00 am - 8:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Somos una tienda de café especial, enfocados en brindar experiencia unica.</p>
+                    </div>
+                <p><strong>Calificación General: 4,8</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/cafe-de-la-tinteria.jpg" alt="Café de la Tintería">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">enaMORAdos Café</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 18 #40a-71</strong><br>9:30 am - 6:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Donde cada rincón te transporta a una época dorada.</p>
+                    </div>
+                <p><strong>Calificación General: 3,9</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/Enamorados.jpg" alt="enaMORAdos Café">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Agüita Negra</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 4a #26c-04</strong><br>12:00 pm - 8:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Café de especialidad santandereano. Catas de café, bebidas de Autor. etc</p>
+                    </div>
+                <p><strong>Calificación General: 4,9</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/aguitanegra.jpg" alt="Agüita Negra Café">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café Jaguar</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cll 12b #02-85</strong><br>9:00 am - 7:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Primer puesto en la 2a feria Expocafé de silvana 2024.</p>
+                    </div>
+                <p><strong>Calificación General: 4,7</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/JaguarSitio.jpg" alt="Café Jaguar">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Café Racer</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 45a #137-59</strong><br>8:00 am - 6:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Café de alto cilindraje.<br>Cuando la pasión por el<br>café y las motos se unen.</p>
+                    </div>
+                <p><strong>Calificación General: 4,8</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/Cafe racer.jpg" alt="Café Racer">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">QUIPILE Coffe</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 24 #42-71</strong><br>9:00 am - 8:00 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>12 años en el mercado nos hacen una tienda de cafés especiales distinta.</p>
+                    </div>
+                <p><strong>Calificación General: 4,7</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/Quipile.jpg" alt="QUIPILE Coffe">
+            </div>
+        </div>
+    </div>
+
+    <div class="cafeteria-card">
+        <div class="cafeteria-header">Vronx 60</div>
+        <div class="cafeteria-content">
+            <div class="cafeteria-info">
+                <p><strong>Cra 15a #08-50</strong><br>9:00 am - 5:30 pm</p>
+                    <div class="descripcion-cafeteria">
+                    <p>Los mejores cafés de colombia preparados en métodos alternativos.</p>
+                    </div>
+                <p><strong>Calificación General: 5,0</strong></p>
+            </div>
+            <div class="cafeteria-image">
+                <img src="Imagenes/cafeterias/vronx.jpg" alt="Vronx 60">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/Logo.png" alt="Logo pasaporte del café">
+            </a>
+        </div>
+    
+        <div class="footer-info">
+            <div class="footer-card">
+                <a href="#" class="footer-btn">Contáctanos por nuestras redes sociales</a>
+            </div>
+            <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+        </div>
+    
+        <div class="footer-redes">
+            <p class="footer-titulo">Nuestras redes sociales</p>
+            <ul>
+                <li><i class="bi bi-instagram"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-facebook"></i> PasaportedelCafe.co</li>
+                <li><i class="bi bi-youtube"></i> PasaportedelCafeCo</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="Mapa.js"></script>
+
+</body>
