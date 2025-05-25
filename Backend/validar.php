@@ -43,8 +43,12 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
+    while ($row = $result->fetch_array(MYSQLI_NUM)) {
+        $id=$row[0];
+    }
     $_SESSION['autenticado'] = true;
     $_SESSION['correo'] = $correo;
+    $_SESSION['id'] = $id;
     echo json_encode(["status" => "ok", "message" => "Inicio de sesión exitoso"]);
 } else {
     echo json_encode(["status" => "fail", "message" => "Correo o contraseña incorrectos"]);

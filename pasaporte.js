@@ -4,63 +4,115 @@ document.addEventListener("DOMContentLoaded", function () {
     const sesionIniciada = localStorage.getItem("SesiónIniciada");
 
 
+
+
     if (sesionIniciada === "true") {
-            // Mostrar contenedores
-            codigos.forEach(elem => elem.style.display = "block");
-        } else {
-            // Ocultar contenedores
-            codigos.forEach(elem => elem.style.display = "none");
-            estrellass.forEach(elem => elem.style.display = "none");
-        }
-    
-    function validarCodigo(event) {
-        const contenedor = event.target.closest(".contenedor-codigo");
-        const carrusel = contenedor.closest(".carrusel-item");
-        const estrellas = carrusel.querySelector(".contenedor-estrellas");
-        const codigoCorrecto = carrusel.getAttribute("data-codigo");
-        const codigoIngresado = contenedor.querySelector("input").value.trim();
-        const sello = carrusel.querySelector(".sello");
-        
+        // Mostrar contenedores
+        codigos.forEach(elem => elem.style.display = "block");
+    } else {
+        // Ocultar contenedores
+        codigos.forEach(elem => elem.style.display = "none");
+        estrellass.forEach(elem => elem.style.display = "none");
+    }
 
 
-        console.log("Estrellas:", estrellas); // 🔍 Verifica si existe
 
-        if (codigoIngresado === codigoCorrecto) {
-            sello.style.display = "block";
-            contenedor.style.display = "none";
+function processing(event){
+     event.preventDefault(); // Prevent the default form submission
 
-            if (estrellas) {
-                estrellas.style.display = "flex"; // 👈 Usa flex si aplica
-            } else {
-                console.warn("No se encontró el contenedor de estrellas.");
+            const contenedor = event.target.closest(".contenedor-codigo");
+            const carrusel = contenedor.closest(".carrusel-item");
+            const estrellas = carrusel.querySelector(".contenedor-estrellas");
+            const sello = carrusel.querySelector(".sello");
+
+
+            const formData = new FormData(this); // Create a FormData object from the form
+            let dataObject = Object.fromEntries(formData.entries());
+            ajaxRequest("https://pasaportedigitaldelcafe.free.nf/Backend/pasaporte.php", "POST", dataObject,
+                function (response) {
+                    const res = JSON.parse(response);
+                    if (res.status === "ok") {
+                        sello.style.display = "block";
+                        contenedor.style.display = "none";
+
+                        if (estrellas) {
+                            estrellas.style.display = "flex"; // 👈 Usa flex si aplica
+                        } else {
+                            console.warn("No se encontró el contenedor de estrellas.");
+                        }
+                    } else {
+                        alert("Código incorrecto");
+                    }
+                })
+}
+
+    window.onload = function () {
+         document.getElementById("validacion-codigo1").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo2").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo3").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo4").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo5").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo6").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo7").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo8").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo9").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo10").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo11").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo12").addEventListener('submit',  processing);
+         document.getElementById("validacion-codigo13").addEventListener('submit',  processing);
+
+    }
+
+    function ajaxRequest(url, method, data, callback) {
+        let xhr = new XMLHttpRequest();
+        xhr.open(method, url, true);  // Open a POST request to your PHP endpoint
+
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        // cuando se complete
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                callback(xhr.responseText);
             }
-        } else {
-            alert("Código incorrecto. Intenta de nuevo.");
-        }
+        };
+
+        // Send the form data with the file to the server
+        xhr.send(JSON.stringify(data));  // Send the FormData object, which includes the file
     }
 
     // Asigna el evento a todos los botones de validación
-    document.querySelectorAll(".icono-boton").forEach(function (boton) {
-        boton.addEventListener("click", validarCodigo);
-    });
+    // document.querySelectorAll(".icono-boton").forEach(function (boton) {
+    //     boton.addEventListener("click", validarCodigo);
+    // });
 
     document.querySelectorAll(".estrellas-container").forEach(container => {
         const estrellas = container.querySelectorAll(".estrella");
 
+
         estrellas.forEach((estrella, i) => {
             estrella.addEventListener("click", () => {
+                const id_cafeteria = container.getAttribute("cafeteria");
+                const formulario = document.getElementById("validacion-codigo"+ id_cafeteria);
+                console.log(id_cafeteria);
                 estrellas.forEach((e, j) => {
-                    e.classList.toggle("seleccionada", j <= i); // ⭐ AQUÍ SE LLENAN
+                    e.classList.toggle("seleccionada", j <= i); //Las estrellas se llenan 
                 });
 
                 const calificacion = i + 1;
+                const puntuacion = formulario.querySelector('input[name="puntuacion"]');
+                const bandera = formulario.querySelector('input[name="bandera"]');
+                bandera.value = "validacion";
+                puntuacion.value = calificacion;
                 console.log("Calificación seleccionada:", calificacion);
 
                 const carrusel = container.closest(".carrusel-item");
                 carrusel.setAttribute("data-calificacion", calificacion);
+                formulario.requestSubmit();
             });
         });
     });
+
+
+
 });
 
 
@@ -111,11 +163,3 @@ function toggleMenu(event) {
 
 // event
 menu.addEventListener('click', toggleMenu, false);
-
-
-
-
-
-
-
-
