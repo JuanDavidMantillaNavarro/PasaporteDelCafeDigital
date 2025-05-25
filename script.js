@@ -363,13 +363,13 @@ window.onload = function () {
     };
 
     const alternateImagesNlog = {
-    "Promo1": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo2": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo3": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo4": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo5": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo6": "Imagenes/PROMOS/Red_X.svg.png",
-    "Promo7": "Imagenes/PROMOS/Red_X.svg.png"
+    "Promo1": "Imagenes/PROMOS/Aviso.png",
+    "Promo2": "Imagenes/PROMOS/Aviso.svg.png",
+    "Promo3": "Imagenes/PROMOS/Aviso.svg.png",
+    "Promo4": "Imagenes/PROMOS/Aviso.svg.png",
+    "Promo5": "Imagenes/PROMOS/Aviso.svg.png",
+    "Promo6": "Imagenes/PROMOS/Aviso.svg.png",
+    "Promo7": "Imagenes/PROMOS/Aviso.svg.png"
     };
 
     images2.forEach(img => {

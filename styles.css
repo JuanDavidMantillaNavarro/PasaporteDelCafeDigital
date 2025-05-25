@@ -2138,6 +2138,96 @@ i:hover {
     font-size: 20px;
     color: #E6D5B8;
 }
+/*Perfil*/
+
+.perfil-contenedor {
+  font-family: 'Inria Serif', serif;
+  padding: 2rem;
+  color: #4d3b32;
+}
+
+.pasaporte {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 1;
+}
+
+.columna-perfil {
+  text-align: center;
+}
+
+.carnet {
+  border: 1px solid #4d3b32;
+  height: 200px;
+  width: 160px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.carnet img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+#inputFoto {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.columna-derecha {
+  margin-top: 1rem; 
+}
+
+.titulo {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: #4d3b32;
+}
+
+.linea {
+  border-bottom: 1px solid #4d3b32;
+  height: 1.2rem;
+}
+
+.texto-final {
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.resaltado {
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
     .footer {
