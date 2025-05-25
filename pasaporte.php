@@ -39,6 +39,30 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
+
+if ($bandera == "obtenerSellos") {
+    $sql = "SELECT id_cafeteria FROM puntuacion WHERE id_login = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("s", $id_login);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $cafeterias = [];
+    while ($row = $result->fetch_assoc()) {
+        $cafeterias[] = $row['id_cafeteria'];
+    }
+
+    echo json_encode(["status" => "ok", "cafeterias" => $cafeterias]);
+    exit();
+}
+
+
+
+// ✅ Ahora puedes acceder a los otros datos con seguridad
+$cafeteria = $decodedData['id_cafeteria'] ?? null;
+$codigo = $decodedData['codigo'] ?? null;
+$puntuacion = $decodedData['puntuacion'] ?? null;
+
 if($bandera == 'codigo'){
     $sql = "SELECT * FROM codigos_aleatorios c LEFT JOIN puntuacion p ON c.codigo = p.codigo WHERE c.codigo = ? AND p.codigo IS NULL";
     $stmt = $mysqli->prepare($sql);
@@ -64,4 +88,5 @@ if($bandera == 'codigo'){
         echo json_encode(["status" => "ok", "message" => "Registro exitoso"]);
 }
 $stmt->close();
-$mysqli->close();
+$mysqli->close();
+
