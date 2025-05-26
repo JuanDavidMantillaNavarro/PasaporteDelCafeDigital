@@ -364,12 +364,12 @@ window.onload = function () {
 
     const alternateImagesNlog = {
     "Promo1": "Imagenes/PROMOS/Aviso.png",
-    "Promo2": "Imagenes/PROMOS/Aviso.svg.png",
-    "Promo3": "Imagenes/PROMOS/Aviso.svg.png",
-    "Promo4": "Imagenes/PROMOS/Aviso.svg.png",
-    "Promo5": "Imagenes/PROMOS/Aviso.svg.png",
-    "Promo6": "Imagenes/PROMOS/Aviso.svg.png",
-    "Promo7": "Imagenes/PROMOS/Aviso.svg.png"
+    "Promo2": "Imagenes/PROMOS/Aviso.png",
+    "Promo3": "Imagenes/PROMOS/Aviso.png",
+    "Promo4": "Imagenes/PROMOS/Aviso.png",
+    "Promo5": "Imagenes/PROMOS/Aviso.png",
+    "Promo6": "Imagenes/PROMOS/Aviso.png",
+    "Promo7": "Imagenes/PROMOS/Aviso.png"
     };
 
     images2.forEach(img => {
@@ -417,7 +417,3 @@ document.addEventListener("DOMContentLoaded", function () {
       cookieBanner.style.display = "none";
     });
   });
-
-
-
-  
